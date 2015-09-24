@@ -1,0 +1,15 @@
+#!/bin/bash
+for entry in ./*.md
+do
+	sourcefile=$(basename "$entry")	
+	# select the extension
+	extension="${sourcefile##*.}"
+	# remove the extension
+	filename="${sourcefile%.*}"		
+	# attach .html to the filename
+	# simply to avoid the files ending with ".md.html"
+	outfile="${filename}.html"
+	# generate the html file of the current markdown file
+	pandoc $sourcefile -o $outfile
+	echo "Generated $outfile"
+done
