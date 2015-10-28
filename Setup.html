@@ -1,0 +1,20 @@
+<h3 id="prerequisites">Prerequisites</h3>
+<p>GreenNav consists of a Java server with an HTML+JavaScript frontend. It is divided into multiple Maven modules, where Maven is a build management tool helping with dependencies, building the project and a lot more. If you want to use and contribute to GreenNav, you will need to following (we usually assume the latest versions):</p>
+<ul>
+<li>Git</li>
+<li>Maven 3</li>
+<li>Java (7+)</li>
+<li>An IDE of your choice (e.g. Eclipse Juno+)</li>
+</ul>
+<h3 id="installing">Installing</h3>
+<p>If you clone the repository you will find a Maven project containing the parent <code>pom.xml</code>, some text files (e.g. the readme and the license note) and folders for the Maven modules.</p>
+<p>In order to get the project files, you need to run: * <code>git clone https://github.com/Greennav/greennav.git</code></p>
+<p>Go into the project directory and enter <code>mvn install</code>. This will compile the project, run the test cases, and install the result to your local repository (i.e. it is available on your system). Sometimes test cases may take quite a while, so if you want to skip tests, you write <code>mvn install -DskipTests</code> instead.</p>
+<h3 id="configuring">Configuring</h3>
+<p>The frontend is started with the default configuration, which connects to localhost. It is important to tell the frontend which server to connect to. You can configure this in the <code>pom.xml</code> of the parent project, where you can find a parameter called <code>webservice.url</code>. There you can enter whatever URL the frontend is supposed to connect to. The default is <code>http://localhost:8111</code>.</p>
+<h3 id="using">Using</h3>
+<p>In order to run the routing server we suggest to simply use the Jetty plugin. You would just enter <code>mvn jetty:run -pl Server</code>. You can launch the frontend the same way as the server, namely by typing <code>mvn jetty:run -pl GoogleFrontend</code>.</p>
+<p>There are currently two server variants: This is important to recognize, because besides the routing server found at the public repository, there is another variant hosted at the University of Lübeck, which is under active research. Nevertheless, you can still choose to connect the frontend to the public web interface of this variant. This can be done by configuring the <code>webservice.url</code> to <code>https://greennav.isp.uni-luebeck.de/greennav</code>.</p>
+<h3 id="some-notes-about-the-android-app">Some notes about the Android app</h3>
+<p>The app uses a WebView and a Javascript bridge with JavascriptInterfaces. For that, we need Android 17+ (maybe earlier version do work, but they do not have the annotations, making things insecure). Be careful however, from where you install the android sdk into your local repositories! To make it work, I needed to install the android sdk, installed it to /opt/android/sdk and installed /opt/android/sdk/platforms/android-23/android.jar to my local maven repository, using the following command:</p>
+<p>mvn install:install-file -Dfile=android.jar -DgroupId=com.google.android -DartifactId=android -Dversion=23 -Dpackaging=jar</p>
