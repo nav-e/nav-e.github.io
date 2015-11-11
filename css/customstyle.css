@@ -1,0 +1,35 @@
+.page-title
+{
+	font-weight: bold;
+	font-size: xx-large;
+}
+#entry_container
+{
+	padding-top: 1cm;
+}
+ul.side-nav > div
+{
+	padding-bottom: 8px;
+}
+
+ul.side-nav > div > h5
+{
+	margin-top: -1cm;
+}
+ul.side-nav > li.bold
+{
+	padding-left:0;
+	padding-right:0;	
+}
+ul.side-nav > li.bold:hover
+{
+	background-color: white;
+}
+ul.side-nav > li.bold > p
+{
+	width:100%;
+	font-size:large;
+	font-weight:bold;
+	padding:6px 0px 6px 20%;
+	margin:0;	
+}
