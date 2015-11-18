@@ -1,0 +1,44 @@
+<link rel="import" href="bower-components/polymer/polymer.html">
+<link rel="import" href="bower-components/iron-ajax/iron-ajax.html">
+
+<dom-module id="github-markdown-files">
+
+  <template>
+    <iron-ajax
+      auto
+      url="https://api.github.com/repos/greennav/greennav.github.io/contents/wiki"
+      handle-as="json"
+      on-response="handleResponse"
+      debounce-duration="300"></iron-ajax>
+  </template>
+
+</dom-module>
+
+<script>
+
+  Polymer({
+
+    is: 'github-markdown-files',
+
+    properties: {
+      files: {
+        type: Array,
+        notify: true
+      }
+    },
+
+    handleResponse: function(request) {
+      this.set('files', []);
+
+      for (var i = 0; i < request.detail.response.length; i++) {
+        var file = request.detail.response[i]
+
+        if (file.name.endsWith(".md")) {
+          this.unshift('files', { name: file.name.replace('.md', ''), path: file.download_url });
+        }
+      };
+    }
+
+  });
+
+</script>

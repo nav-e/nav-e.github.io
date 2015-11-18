@@ -1,0 +1,11 @@
+{
+  "name": "polymer-documentation",
+  "private": true,
+  "dependencies": {
+    "paper-elements": "PolymerElements/paper-elements",
+    "iron-elements": "PolymerElements/iron-elements",
+    "polymer": "Polymer/polymer",
+    "mark-down": "robdodson/mark-down#~1.0.0"
+  },
+  "ignore": []
+}
