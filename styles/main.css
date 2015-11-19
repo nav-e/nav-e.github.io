@@ -1,5 +1,31 @@
-body {
-  background: #fafafa;
-  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #333;
+body
+{
+  	font-family: 'Open Sans', sans-serif;
+}
+.content 
+{
+	overflow: auto;
+	margin: 18px 18px 18px 32px;	
+}
+img
+{
+	max-width: 100%;
+}
+paper-button
+{
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+paper-icon-button[icon="create"]
+{
+	margin-left: 8px;
+	color: #218E21;	
+}
+paper-toolbar.paper-toolbar-0
+{
+	background-color: #218E21;
+}
+paper-header-panel[main]
+{
+	background-color: #eceff1;
 }
