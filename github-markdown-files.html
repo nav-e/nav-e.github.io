@@ -34,7 +34,11 @@
         var file = request.detail.response[i]
 
         if (file.name.endsWith(".md")) {
-          this.unshift('files', { name: file.name.replace('.md', ''), path: file.download_url });
+          this.unshift('files', { 
+            name: file.name.replace('.md', ''), 
+            path: file.download_url, 
+            link: file.html_url
+            });
         }
       };
     }

@@ -1,10 +1,10 @@
 <!doctype html>
 <html>
-<head>
-
+	<head>
+	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+	
 	<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
 	
 	<link rel="import" href="bower_components/iron-ajax/iron-ajax.html">
@@ -12,58 +12,67 @@
 	<link rel="import" href="bower_components/iron-pages/iron-pages.html">
 	<link rel="import" href="bower_components/paper-drawer-panel/paper-drawer-panel.html">
 	<link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
+	<link rel="import" href="bower_components/paper-scroll-header-panel/paper-scroll-header-panel.html">
 	<link rel="import" href="bower_components/paper-menu/paper-menu.html">
 	<link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
 	<link rel="import" href="bower_components/mark-down/mark-down.html">
-
+	
 	<link rel="import" href="github-markdown-files.html">
+	
+	
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
+	
+	
+	<!--<link rel="import" href="styles/app-theme.html">
+	<link rel="stylesheet" href="styles/main.css">-->
+	
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+			font-family: 'Open Sans', sans-serif;
+		}
+		paper-scroll-header-panel {
+			height: 100%;
+		}
+		.content {
+			overflow: auto;
+		}
+	</style>
+	
+	</head>
+	
+	<body class="fullbleed layout vertical">
+		
+		<template is="dom-bind">
+			
+			
+			<paper-scroll-header-panel class="flex" fixed>
+				<paper-toolbar flex>
+					Dokumentation GreenNav
+				</paper-toolbar>
+				
+				<paper-drawer-panel flex>
+					<github-markdown-files files="{{ files }}"></github-markdown-files>
+					<paper-menu selected="{{ selected }}" attr-for-selected="path" drawer>
+						<template is="dom-repeat" items="{{ files }}">
+							<paper-item path="{{ item.path }}">
+								<paper-button raised>{{ item.name }}</paper-button>
+							</paper-item>
+							<a href="{{ item.link }}">edit</a>
+							<p>
+						</template>
+					</paper-menu>
 
-	<link rel="import" href="styles/app-theme.html">
-	<link rel="stylesheet" href="styles/main.css">
-
-</head>
-<body unresolved class="fullbleed layout vertical">
-	<template is="dom-bind" id="app">
-
-
-	    <paper-drawer-panel id="paperDrawerPanel">
-	      <!-- Drawer Scroll Header Panel -->
-	      <paper-scroll-header-panel drawer fixed>
-
-	        <!-- Drawer Toolbar -->
-	        <paper-toolbar id="drawerToolbar">
-	          <span class="paper-font-title">Menu</span>
-	        </paper-toolbar>
-
-	        <!-- Get markdown files from repository -->
-		    <github-markdown-files files="{{ files }}"></github-markdown-files>
-
-	        <!-- Drawer Content -->
-	        <paper-menu selected="{{ selected }}" attr-for-selected="path">
-		    	<template is="dom-repeat" items="{{ files }}">
-		    		<paper-item path="{{ item.path }}">{{ item.name }}</paper-item>
-		    		<p></p>
-		    	</template>
-	        </paper-menu>
-
-	      </paper-scroll-header-panel>
-
-	      <!-- Main Area -->
-	      <paper-scroll-header-panel main id="headerPanelMain" condenses no-reveal no-dissolve>
-
-	        
-	        <!-- Request the markdown selected from github -->
-	        <iron-ajax auto handle-as="text" url="{{ selected }}" last-response="{{ markdown }}"></iron-ajax>
-
-	        <!-- Main Content -->
-	        <div class="content">
-	        	<paper-material elevation="1" class="content-card">
-		        	<mark-down text="{{ markdown }}"></mark-down>
-	        	</paper-material>
-	        </div>
-	    </paper-drawer-panel>
-    </template>
-
-</body>
+					<div class="content" main>
+						<iron-ajax auto handle-as="text" url="{{ selected }}" last-response="{{ markdown }}"></iron-ajax>
+						<mark-down text="{{ markdown }}"></mark-down>
+					</div>
+						
+				</paper-drawer-panel>
+			</paper-scroll-header-panel>
+		</template>
+	
+	</body>
 </html>
