@@ -1,12 +1,12 @@
 <link rel="import" href="bower_components/polymer/polymer.html">
 <link rel="import" href="bower_components/iron-ajax/iron-ajax.html">
 
-<dom-module id="github-markdown-files">
+<dom-module id="github-wiki-folders">
 
   <template>
     <iron-ajax
       auto
-      url="https://api.github.com/repos/greennav/greennav.github.io/contents/wiki/Architecture"
+      url="https://api.github.com/repos/Flow42/greennav.github.io/contents/wiki"     
       handle-as="json"
       on-response="handleResponse"
       debounce-duration="300"></iron-ajax>
@@ -18,7 +18,7 @@
 
   Polymer({
 
-    is: 'github-markdown-files',
+    is: 'github-wiki-folders',
 
     properties: {
       files: {
