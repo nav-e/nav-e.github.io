@@ -6,12 +6,22 @@
   <template>
     <iron-ajax
       auto
-      url="https://api.github.com/repos/Flow42/greennav.github.io/contents/wiki"     
+      url="https://api.github.com/repos/Flow42/greennav.github.io/contents/wiki"
       handle-as="json"
       on-response="handleResponse"
       debounce-duration="300"></iron-ajax>
+
+     <template is="dom-repeat" items="{{ folders }}">
+      	<paper-submenu>
+      		<paper-item class="menu-trigger">{{ item.name }}</paper-item>
+      			<github-markdown-files files="{{ files }}" selected="{{ selected }}" url={{item.address}}></github-markdown-files>
+      	</paper-submenu>
+	</template>
+     
+      
   </template>
 
+    
 </dom-module>
 
 <script>
@@ -21,23 +31,26 @@
     is: 'github-wiki-folders',
 
     properties: {
-      files: {
+      folders: {
+        type: Array,
+        notify: true
+      },
+      selected: {
         type: Array,
         notify: true
       }
     },
 
     handleResponse: function(request) {
-      this.set('files', []);
+      this.set('folders', []);
 
       for (var i = 0; i < request.detail.response.length; i++) {
         var file = request.detail.response[i]
 
-        if (file.name.endsWith(".md")) {
-          this.unshift('files', { 
-            name: file.name.replace('.md', ''), 
-            path: file.download_url, 
-            link: file.html_url
+        if (file.type==="dir") {
+          this.unshift('folders', { 
+          	name: file.name,
+            address: file.url            
             });
         }
       };

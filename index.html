@@ -23,6 +23,7 @@
 	<link rel="import" href="bower_components/mark-down/mark-down.html">
 	
 	<link rel="import" href="github-markdown-files.html">
+	<link rel="import" href="github-wiki-folders.html">
 	
 	
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
@@ -41,23 +42,18 @@
 			<paper-scroll-header-panel class="flex" fixed>
 				
 				<paper-drawer-panel flex>
-					<github-markdown-files files="{{ files }}"></github-markdown-files>
+					
 					<paper-header-panel drawer>					
 						<paper-toolbar flex>
 							<div class="title">
 								Menu
 							</div>
-						</paper-toolbar>					
-						<paper-menu selected="{{ selected }}" attr-for-selected="element" drawer>
-							<template is="dom-repeat" items="{{ files }}">
-								<a href="{{ item.link }}">
-									<paper-icon-button icon="create"></paper-icon-button>
-								</a>
-								<paper-item element="{{ item }}">
-									<paper-button>{{ item.name }}</paper-button>
-								</paper-item>
-								<br>							
-							</template>						
+						</paper-toolbar>
+						
+						<!-- <github-markdown-files files="{{ files }}" selected="{{ selected }}" url="https://api.github.com/repos/greennav/greennav.github.io/contents/wiki">
+						</github-markdown-files> -->
+						<paper-menu>
+						<github-wiki-folders folders="{{ folders }}" selected="{{ selected }}"></github-wiki-folders>
 						</paper-menu>
 					</paper-header-panel>
 

@@ -6,10 +6,24 @@
   <template>
     <iron-ajax
       auto
-      url="https://api.github.com/repos/greennav/greennav.github.io/contents/wiki/Architecture"
+      url="{{url}}"
       handle-as="json"
       on-response="handleResponse"
       debounce-duration="300"></iron-ajax>
+     
+      <paper-menu class="menu-content" selected="{{ selected }}" attr-for-selected="element">
+        <template is="dom-repeat" items="{{ files }}">
+          <a href="{{ item.link }}">
+            <paper-icon-button icon="create"></paper-icon-button>
+          </a>
+          <paper-item element="{{ item }}">
+            <paper-button>{{ item.name }}</paper-button>
+          </paper-item>
+          <br>              
+        </template>           
+      </paper-menu>
+           
+
   </template>
 
 </dom-module>
@@ -24,7 +38,12 @@
       files: {
         type: Array,
         notify: true
-      }
+      },
+      selected: {
+        type: Array,
+        notify: true
+      },
+      url : String
     },
 
     handleResponse: function(request) {
