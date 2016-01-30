@@ -1,5 +1,11 @@
 <link rel="import" href="bower_components/polymer/polymer.html">
 <link rel="import" href="bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="bower_components/iron-collapse/iron-collapse.html">
+<link rel="import" href="bower_components/paper-menu/paper-menu.html">
+<link rel="import" href="bower_components/paper-menu/paper-submenu.html">
+
+<link rel="import" href="github-markdown-files.html">
+
 
 <dom-module id="github-wiki-folders">
 
@@ -11,14 +17,9 @@
       on-response="handleResponse"
       debounce-duration="300"></iron-ajax>
 
-     <template is="dom-repeat" items="{{ folders }}">
-      	<paper-submenu>
-      		<paper-item class="menu-trigger">{{ item.name }}</paper-item>
-      			<github-markdown-files files="{{ files }}" selected="{{ selected }}" url={{item.address}}></github-markdown-files>
-      	</paper-submenu>
-	</template>
-     
-      
+      <template is="dom-repeat" items="{{ folders }}">
+      		<github-markdown-files files="{{ item.files }}" url="[[ item.url ]]"></github-markdown-files>
+      </template>
   </template>
 
     
@@ -33,12 +34,12 @@
     properties: {
       folders: {
         type: Array,
-        notify: true
-      },
-      selected: {
-        type: Array,
-        notify: true
-      }
+        notify: true,
+        files: {
+        	type: Array,
+        	notify: true
+      	}
+      }           
     },
 
     handleResponse: function(request) {
@@ -50,11 +51,11 @@
         if (file.type==="dir") {
           this.unshift('folders', { 
           	name: file.name,
-            address: file.url            
+            url: file.url            
             });
         }
       };
-    }
+    }   
 
   });
 

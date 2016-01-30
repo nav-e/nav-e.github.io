@@ -1,29 +1,18 @@
 <link rel="import" href="bower_components/polymer/polymer.html">
 <link rel="import" href="bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="bower_components/iron-collapse/iron-collapse.html">
+<link rel="import" href="bower_components/paper-menu/paper-menu.html">
+<link rel="import" href="bower_components/paper-menu/paper-submenu.html">
 
 <dom-module id="github-markdown-files">
 
   <template>
     <iron-ajax
       auto
-      url="{{url}}"
+      url="[[ url ]]"
       handle-as="json"
       on-response="handleResponse"
       debounce-duration="300"></iron-ajax>
-     
-      <paper-menu class="menu-content" selected="{{ selected }}" attr-for-selected="element">
-        <template is="dom-repeat" items="{{ files }}">
-          <a href="{{ item.link }}">
-            <paper-icon-button icon="create"></paper-icon-button>
-          </a>
-          <paper-item element="{{ item }}">
-            <paper-button>{{ item.name }}</paper-button>
-          </paper-item>
-          <br>              
-        </template>           
-      </paper-menu>
-           
-
   </template>
 
 </dom-module>
@@ -37,13 +26,11 @@
     properties: {
       files: {
         type: Array,
-        notify: true
-      },
-      selected: {
-        type: Array,
-        notify: true
-      },
-      url : String
+        notify: true,        
+      },      
+      url: {
+        type: String
+      } 
     },
 
     handleResponse: function(request) {
