@@ -4,50 +4,58 @@
 <link rel="import" href="bower_components/paper-menu/paper-menu.html">
 <link rel="import" href="bower_components/paper-menu/paper-submenu.html">
 
-<dom-module id="github-markdown-files">
+<link rel="import" href="github-markdown-files.html">
+
+
+<dom-module id="github-wiki-folders">
 
   <template>
     <iron-ajax
       auto
-      url="[[ url ]]"
+      url="https://api.github.com/repos/Flow42/greennav.github.io/contents/wiki"
       handle-as="json"
       on-response="handleResponse"
       debounce-duration="300"></iron-ajax>
+
+      <template is="dom-repeat" items="{{ folders }}">
+      		<github-markdown-files files="{{ item.files }}" url="[[ item.url ]]"></github-markdown-files>
+      </template>
   </template>
 
+    
 </dom-module>
 
 <script>
 
   Polymer({
 
-    is: 'github-markdown-files',
+    is: 'github-wiki-folders',
 
     properties: {
-      files: {
+      folders: {
         type: Array,
-        notify: true,        
-      },      
-      url: {
-        type: String
-      } 
+        notify: true,
+        files: {
+        	type: Array,
+        	notify: true
+      	}
+      }           
     },
 
     handleResponse: function(request) {
-      this.set('files', []);
+      this.set('folders', []);
 
       for (var i = 0; i < request.detail.response.length; i++) {
         var file = request.detail.response[i]
 
-        if (file.name.endsWith(".md")) {
-          this.unshift('files', { 
-            name: file.name.replace('.md', ''), 
-            path: file.download_url, 
-            link: file.html_url
+        if (file.type==="dir") {
+          this.unshift('folders', { 
+          	name: file.name,
+            url: file.url            
             });
         }
       };
-    }
+    }   
 
   });
 
