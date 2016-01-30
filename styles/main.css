@@ -29,3 +29,10 @@ paper-header-panel[main]
 {
 	background-color: #eceff1;
 }
+#logo-holder
+{
+	background-color:white;
+	width:100px;
+	padding-left: 10px;
+	padding-top: 6px;
+}

@@ -78,9 +78,14 @@
 					<paper-header-panel main>
 						<paper-toolbar flex>
 							<paper-icon-button icon="menu" paper-drawer-toggle>test</paper-icon-button>
-							<div class="title">
+							<span class="title">
 								GreenNav Project Wiki								
-							</div>							
+							</span>
+							<span id="logo-holder">
+							<a href="https://www.isp.uni-luebeck.de/research/projects/green-navigation">
+								<iron-image sizing="cover" style="height:50px;width:85px" src="https://www.isp.uni-luebeck.de/sites/all/themes/isp_zen/isp.png"></iron-image>
+							</a>
+							</span>
 						</paper-toolbar>
 						<div class="content" main flex>						
 							<iron-ajax auto handle-as="text" url="{{ selected.path }}" last-response="{{ markdown }}"></iron-ajax>
