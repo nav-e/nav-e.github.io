@@ -4,7 +4,7 @@ If you want to work on these topics (for example within a university project or 
 
 ### Visualization of Routing Algorithms
 
-In order to analyse routing algorithms, we want to visualize how algorithms search through a road network. There have been some first approaches (see below). The objective of this project is to offer such kind of a visualization through the web service to the frontend. Furthermore, the visualization of the algorithm's search queue should be configurable, not only in the choice of color but also in what is should at which image. A successful implementation offers students to learn about shortest path algorithms and it provides algorithm developers with a way to analyse the behavior of their algorithms.
+In order to analyze routing algorithms, we want to visualize how algorithms search through a road network. There have been some first approaches (see below). The objective of this project is to offer such kind of a visualization through the web service to the frontend. Furthermore, the visualization of the algorithm's search queue should be configurable, not only in choice of color, but also in what is shown at which image. A successful implementation offers students to learn about shortest path algorithms and it provides algorithm developers with a way to analyze the behavior of their algorithms.
 
 ![Dijkstra's Algorithm](http://www.isp.uni-luebeck.de/~schoenfr/greennav/dijkstra.gif)
 ![A* Algorithm](http://www.isp.uni-luebeck.de/~schoenfr/greennav/astar.gif)
@@ -60,7 +60,7 @@ Your skill set:
 
 ### Migration to Mobile Devices
 
-Making GreenNav available to mobile platforms will give the opportunity to use GreenNav for navigation. We have done some first steps to build a navigation system, but it needs some rework to make it more platform independent. It would be nice to use the existing frontend as a basis, so that we do not have too many different code bases. Our aim is make GreenNav a navigation systems usable in electric vehicles.
+Making GreenNav available to mobile platforms will give the opportunity to use GreenNav for navigation. We have done some first steps to build a navigation system, but it needs some rework to make it more platform independent. It would be nice to use the existing frontend as a basis, so that we do not have too many different code bases. Our aim is to make GreenNav a navigation system usable for electric vehicles.
 
 ![Android App for GreenNav](http://www.isp.uni-luebeck.de/~schoenfr/greennav/androidexample.png)
 
