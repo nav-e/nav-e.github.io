@@ -73,3 +73,16 @@ Your skill set:
 * Good knowledge in JavaScript
 * Good knowledge in App development (preferably based on web app migration)
 * Interest in refactoring existing software to improve quality
+
+### Construction of a database
+
+For now we load small areas directly in the server RAM. That is ineffective and computationally expensive so your goal in context of GSoC 2016 will be to design a database using NoSQL in combination with GO.
+To succeed this project we supposed that you:
+* Implement a NoSQL database using go
+* Feed the database with OSM way nodes, streets, buildings, ...
+* Provide an API to access the data
+
+Your skill set:
+* Good knowledge in database schemas and optimization
+* Experience with GO
+* Interest in navigation problems and OSM API
