@@ -86,3 +86,15 @@ Your skill set:
 * Good knowledge in database schemas and optimization
 * Experience with GO
 * Interest in navigation problems and OSM API
+
+### Enhancing the existing (Polymer) front end
+
+For this task it is important that you are familar with media informatics and UI programming.
+Our front end uses [Polymer 1.0](https://www.polymer-project.org/1.0/) but we need help do refactor and redesign the
+components. So we aim to increase the coding standards and the UI user feeling (also on different devices).
+In this context it would be great to create a corporate design and a new logo.
+
+Your skill set:
+* Good knowledge in HTML5, JavaScript and CSS
+* Polymer 1.0 Experience (know the docs and guidelines)
+* Interest in refactoring and design
