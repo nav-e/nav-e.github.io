@@ -1,100 +1,91 @@
-The Green Navigation project is part of a research project at the University of Lübeck and is therefore closely related to student projects at the university. We decided to publish this project in order to actively develop and discuss different ideas especially on the frontend of GreenNav.
+# Roadmap
 
-If you want to work on these topics (for example within a university project or thesis), you can contact [René Schönfelder](http://www.isp.uni-luebeck.de/staff/schoenfr).
+Green Navigation is a prototyping system to compute energy-optimal routes and to predict the cruising range of electric vehicles. The aim of the project is both to offer users optimal routes for electric vehicles and to offer researchers the tools for prototyping and evaluating their algorithms.
 
-### Visualization of Routing Algorithms
+In 2015, we made an effort to relaunch the project and the vision behind it as an open source organization to set up a universal framework. Since then, most of the original front end codebase was ported to a new polymer-based webapp and the first draft of a JavaScript prototyping tool has been built.
 
-In order to analyze routing algorithms, we want to visualize how algorithms search through a road network. There have been some first approaches (see below). The objective of this project is to offer such kind of a visualization through the web service to the frontend. Furthermore, the visualization of the algorithm's search queue should be configurable, not only in choice of color, but also in what is shown at which image. A successful implementation offers students to learn about shortest path algorithms and it provides algorithm developers with a way to analyze the behavior of their algorithms.
+## Vision
 
-![Dijkstra's Algorithm](http://www.isp.uni-luebeck.de/~schoenfr/greennav/dijkstra.gif)
-![A* Algorithm](http://www.isp.uni-luebeck.de/~schoenfr/greennav/astar.gif)
+The goal is to enable developers and users alike to use, extend and compose a flexible navigation system that runs anywhere. Therefore, GreenNavigation will use/provide as much data as possible:
 
-For this purpose, the following tasks should be accomplished:
+- OpenStreetMap data
+- NASA geo height information
+- Temperature (needed for battery life predictions)
+- Traffic information
+- Car sharing providers
+- Public transport
+- ...
 
-* Migration of the experimental stand alone Java application for routing algorithm visualization to a JavaScript web application, including the drawing of the search space over time.
-* Development of data transmission concept to avoid unnecessary transfer volume.
-* Offering options to the user on how the results should be visualized.
-* Optional: Providing a tool for automatically creating gif files.
-* Optional: Use parallelization such that observing the algorithm does not slow down the routing too much.
-* Optional: Develop a domain specific language (DSL) for customizing visualizations.
+With that new approach, we hope to create a powerful framework, that runs anywhere - from servers to phones, from web services to built-in offline solutions in electric vehicles. Thus, the system must be very light on resources, easily extendable, scalable and must run distributed as well as centralized.
 
-(We are currently thinking about making this two different projects, one for visualization and one for observing the algorithm behavior and developing a DSL.)
+## Technology stack
 
-Your skill set:
-* Good knowledge in JavaScript and preferably also in Java
-* Interest in algorithm visualization
-* Beneficial: Knowledge about behavioral design patterns and aspect oriented programming
+Starting from scratch, we tried to meet all the desired features by choosing the best tools:
 
-### Algorithm Comparison
+- Polymer provides composability on the front end side
+- Go enables excellent performance on low resources, cross-platform distribution with ease and brings
+    - An own server in the standard library
+    - Inter-process communication capabilities
+    - Powerful concurrency constructs
+    - Easy deployment (a single executable)
+    - Bundled dependencies
+- PostgreSQL for servers
+- SQLite for mobile devices
 
-Similar to the visualization, we also want to compare various algorithms in efficiency and quality.
-This should be done within the same system to make the results comparable. Of course, different use cases require different kind of algorithmic solutions, so different sets of experiments should be provided or created. Because the aim is to make algorithms comparable, we need to provide a clear and flexible API, so that various algorithms can be implemented. In the frontend we then want to automatically generate tables or graphs with the results on those different experiments.
+## Design plan
 
-![Example for Algorithm Comparison](http://www.isp.uni-luebeck.de/~schoenfr/greennav/algorithmcomparison.png)
+Currently, only the front end is rewritten. It uses a legacy backend, which we will replace with a new one. The new backend will consist of three components:
 
-For this purpose, the following tasks should be accomplished:
-* Provide different routing experiments or even provide means to generate new ones.
-* Automatically create tables and graphs for comparing the efficiency and quality of algorithms. 
-* Develop a flexible API for algorithm and data structure implementation.
-* Optional: Provide a way to inject new algorithms for example using a plugin system such as OSGi.
+- Database service
+    - Connects to either SQLite or Postgres
+    - Gathers information from various sources and creates the database
+        - OSM, NASA, Temperature, Traffic, Car sharing etc
+    - Minimizes the database access to gain performance
+    - Performs intelligent queries
+    - Makes updates
+    - Provides a REST and a RPC interface
+- Native service
+    - Reads hardware information
+        - Battery status from electric vehicles
+        - Position from GPS devices
+    - Provides a REST and a RPC interface
+- **Routing service**
+    - Uses the database service
+    - Can use a native service
+    - Contains the routing algorithms
+    - Provides a REST interface for the front end
 
-Your skill set:
-* Good knowledge in Java and preferably also in JavaScript
-* Interest in scientific comparisons of data structures and algorithms
-* Beneficial: Knowledge about behavioral and structural design patterns
 
-### Flexible API for Routing Algorithms
+The front end is made up of many small components sharing (sub) components:
 
-Providing an easy to use API is important for the developers contributing new routing algorithms. These algorithms could then be visualized or evaluated as described above. The development of such an API must be done, so that both new algorithms and new data structures may be developed and combined. The API should be sufficiently generic to apply the algorithms to a large variety of different routing problems. Persistence also plays a big role in designing an API for routing algorithms, because many sophisticated algorithms do precomputations on the network.
+- Reference web app
+    - Map component (OSM, Google Maps, Bing, ...)
+    - Shows route and range (based on battery)
+- Prototyping tool
+    - HTML5 JavaScript editor to develop new algorithms
+    - GitHub connection to save and share
+    - Test with real routing queries
+    - Connects to Database service (backend)
+    - One can port Results to Go and integrate them into the Routing service (backend) easily because they use the same database
+- Visualizer
+    - Takes any routing algorithms from Routing service or JavaScript prototypes
+    - Visualizes every single step
+    - Shows statistics
+        - Database queries performed
+        - Steps used
 
-For this purpose, the following tasks should be accomplished:
-* Provide API for algorithms and data structures in the context of routing problems
-* Use generics in order to cover a large variety on different routing problems
-* Provide a layer of persistence for precomputations
+## Usage examples
 
-Your skill set:
-* Good knowledge of Java
-* Interest in the design of algorithms and data structures
-* Beneficial: Experience in API design
-* Beneficial: Experience in a plugin system for Java such as OSGi
+### Car
 
-### Migration to Mobile Devices
+The greatest usage example would be to implement a navigation system for an electric car using GreenNavigation software on a Raspberry PI.
 
-Making GreenNav available to mobile platforms will give the opportunity to use GreenNav for navigation. We have done some first steps to build a navigation system, but it needs some rework to make it more platform independent. It would be nice to use the existing frontend as a basis, so that we do not have too many different code bases. Our aim is to make GreenNav a navigation system usable for electric vehicles.
+One would start by building the Database service with the SQLite backend. Then, the Native service would be adapted to talk to the hardware of the car/RPI to read battery and GPS position. Then, one algorithm of the Routing service has to be chosen (or written from scratch or adjusted for the car using real data).
 
-![Android App for GreenNav](http://www.isp.uni-luebeck.de/~schoenfr/greennav/androidexample.png)
+For the frontend, a new UI can be created easily leveraging the existing map component in combination with a newly built dashboard and menu in polymer. To extend the project, the user interface could show additional hints and warnings, use voice output etc
 
-For this purpose, the following tasks should be accomplished:
-* Extend the existing web app for use on mobile devices
-* Integrate the existing navigation app into the frontend
-* Improve the exception handling for a better usability
+### Android app
 
-Your skill set:
-* Good knowledge in JavaScript
-* Good knowledge in App development (preferably based on web app migration)
-* Interest in refactoring existing software to improve quality
+For an android app, we would use SQLite again or connect the Routing service to a webserver or don't use any local backend at all. 
 
-### Construction of a database
-
-For now we load small areas directly in the server RAM. That is ineffective and computationally expensive so your goal in context of GSoC 2016 will be to design a database using NoSQL in combination with GO.
-To succeed this project we supposed that you:
-* Implement a NoSQL database using go
-* Feed the database with OSM way nodes, streets, buildings, ...
-* Provide an API to access the data
-
-Your skill set:
-* Good knowledge in database schemas and optimization
-* Experience with GO
-* Interest in navigation problems and OSM API
-
-### Enhancing the existing (Polymer) front end
-
-For this task it is important that you are familar with media informatics and UI programming.
-Our front end uses [Polymer 1.0](https://www.polymer-project.org/1.0/) but we need help do refactor and redesign the
-components. So we aim to increase the coding standards and the UI user feeling (also on different devices).
-In this context it would be great to create a corporate design and a new logo.
-
-Your skill set:
-* Good knowledge in HTML5, JavaScript and CSS
-* Polymer 1.0 Experience (know the docs and guidelines)
-* Interest in refactoring and design
+The backend and front end can be combined into a single apk, with the front end using either native elements, a webview or hybrid approaches (like react native). GPS data can be obtained within the webview/app or from the backend.
