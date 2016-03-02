@@ -50,13 +50,15 @@ A database is the integral part of this framework. The service will be written i
 - Making database queries and providing RPC and REST interfaces for the routing service
 - Managing queries (batch queries, ordering, queueing etc)
 
-The challenges are creating/updating the database, evaluating perfomance for different schemas, queries and caching strategies. Also, the service must be accessible via REST (to run standalone as a server) and is the main component for adminstration of the framework.
+The challenges are creating/updating the database, evaluating perfomance for different schemas, queries and caching strategies. Also, the service must be accessible via REST (to run standalone on a server) and is the main component for administration of the framework.
 
 - **Difficulty**: 5/5
 - **Skills**: Database (SQLite3/Postgres), Golang, REST/RPC, Query optimization
 - **Mentor**: Max Lorenz
 
 ### Routing service
+
+
 
 ### Native integration service
 
