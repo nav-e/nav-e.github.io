@@ -76,10 +76,16 @@ To use GreenNav on a portable device, the routing service needs information like
 
 ### React native app
 
-We decided to implement GreenNav as a web application and provide a responsive website for mobile devices. But since Facebook launched React Native it's possible to write apps with a native feeling using only one code base using Javascript ES6. So it would be very cool to develop an React Native app that works on Android and iOS.
+We decided to implement GreenNav as a web application and provide a responsive website for mobile devices. But since Facebook launched React Native it's possible to write apps with a native feeling using only one code base using Javascript ES6. So it would be very cool to develop an React Native app that works on Android and iOS. The backend (Database/SQLite, Routing service, Native service) must be bundled as libraries.
 
-- **Difficulty**: Easy
-- **Skills**: Golang, Raspberry Pi, Android (ARM), Hardware
-- **Mentor**: Jannes Feye
+- **Difficulty**: Hard
+- **Skills**: JavaScript ES6, React Native, Golang, Android, iOS
+- **Mentor**: Fabian Bormann
 
 ## Own ideas
+
+You have a cool idea that is aligned with our vision (see the roadmap) but is not listed here? We would love to hear it!
+
+- **Difficulty**: Depends
+- **Skills**: Whatever is necessary
+- **Mentor**: [Mailing list](https://www.isp.uni-luebeck.de/mailman/listinfo/greennav)
