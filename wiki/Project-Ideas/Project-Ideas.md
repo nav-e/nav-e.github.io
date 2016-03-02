@@ -8,7 +8,7 @@ To understand the different areas of this project please take a look at the [roa
 
 The current webapp consists of different polymer elements. Before working on the integration of new features, it is necessary to rethink the current architecture, redesign the UI and refactor the codebase. Furthermore, documentation, logging and user notifications should be implemented in this GSoC project. A new logo would be nice, too.
 
-- **Difficulty**: 2/5 
+- **Difficulty**: Easy
 - **Skills**: Polymer, GUI design
 - **Mentor**: Fabian Bormann
 
@@ -16,7 +16,7 @@ The current webapp consists of different polymer elements. Before working on the
 
 For the webapp, we would like to integrate information regarding weather, traffic, terrain height etc. Since the backend isn't implemented yet, you will create a proof of concept and an interface with the webapp and the back end. This requires communication with your mentor, so those features can be integrated easily upon completion of the GSoC.
 
-- **Difficulty**: 2/5 
+- **Difficulty**: Easy
 - **Skills**: Polymer, GUI design
 - **Mentor**: Fabian Bormann
 
@@ -24,7 +24,7 @@ For the webapp, we would like to integrate information regarding weather, traffi
 
 This project aims to create a single web application with polymer to compare different routing algorithms. It gets the information from either a backend, the prototyping tool or both. The steps of each algorithm are shown on a map component, together with statistics and other performance characteristics. Results should be analyzed (eg. via R) and exportable to enable developers to measure their algorithms, compare them and create useful graphics for their papers.
 
-- **Difficulty**: 4/5
+- **Difficulty**: Hard
 - **Skills**: Polymer, R, statistics, routing algorithms
 - **Mentor**: Max Lorenz
 
@@ -32,7 +32,7 @@ This project aims to create a single web application with polymer to compare dif
 
 The prototyping tool allows developers to design and test new routing algorithms leveraging the GreenNav framework with all data sources (temperature, terrain height etc) easily. A simple MVP in polymer exists, which can be used as a starting point. Since the tool should be language agnostic to empower a variety of people to test their own ideas and algorithms, the language doesn't really matter. A widely used language is prefered (like Python for example) and communication happens via REST. The data for the algorithm is requested from the database service from the backend and results are visualized using the visualization tool which acts as the primary interface.
 
-- **Difficulty**: 5/5
+- **Difficulty**: Hard
 - **Skills**: Polymer, Python (or any other good prototyping language), routing algorithms, REST
 - **Mentor**: Fabian Bormann
 
@@ -52,22 +52,34 @@ A database is the integral part of this framework. The service will be written i
 
 The challenges are creating/updating the database, evaluating perfomance for different schemas, queries and caching strategies. Also, the service must be accessible via REST (to run standalone on a server) and is the main component for administration of the framework.
 
-- **Difficulty**: 5/5
+- **Difficulty**: ~~Nightmare~~ Very hard
 - **Skills**: Database (SQLite3/Postgres), Golang, REST/RPC, Query optimization
 - **Mentor**: Max Lorenz
 
 ### Routing service
 
+This is the heart of the project. The routing service contains the algorithms (A*, Dijkstra, ...) and communicates with the database service and optionally with the native service. For now, the primary target is to make the service work with an example algorithm (eg. A*), so the foundation for future algorithmic work is laid out. The service communicates via RPC or REST with the database and the native integration service. Actual routes are provided with a REST interface for the front end (webapp or visualization tool).
 
+- **Difficulty**: Medium
+- **Skills**: Golang, routing algorithms, REST
+- **Mentor**: Max Lorenz
 
 ### Native integration service
 
-## Algorithms
+To use GreenNav on a portable device, the routing service needs information like battery status, speed or the location. In order to gather the information, this service should be easy to adapt to new architectures and provide a thin layer over the actual hardware. Information must be accessible via REST and RPC. As an example, this should work on a Raspberry Pi and Android.
+
+- **Difficulty**: Easy
+- **Skills**: Golang, Raspberry Pi, Android (ARM), Hardware
+- **Mentor**: Jannes Feye
 
 ## Mobile projects
 
 ### React native app
 
-### Raspberry Pi navigation system
+We decided to implement GreenNav as a web application and provide a responsive website for mobile devices. But since Facebook launched React Native it's possible to write apps with a native feeling using only one code base using Javascript ES6. So it would be very cool to develop an React Native app that works on Android and iOS.
+
+- **Difficulty**: Easy
+- **Skills**: Golang, Raspberry Pi, Android (ARM), Hardware
+- **Mentor**: Jannes Feye
 
 ## Own ideas
