@@ -6,7 +6,7 @@ To understand the different areas of this project please take a look at the [roa
 
 ### Refactoring and GUI design
 
-The current webapp consists of different polymer elements. Before working on the integration of new features, it is necessary to rethink the current architecture, redesign the UI and refactor the codebase. Furthermore, documentation, logging and user notifications should be implemented in this GSoC project.
+The current webapp consists of different polymer elements. Before working on the integration of new features, it is necessary to rethink the current architecture, redesign the UI and refactor the codebase. Furthermore, documentation, logging and user notifications should be implemented in this GSoC project. A new logo would be nice, too.
 
 - **Difficulty**: 2/5 
 - **Skills**: Polymer, GUI design
@@ -34,12 +34,38 @@ The prototyping tool allows developers to design and test new routing algorithms
 
 - **Difficulty**: 5/5
 - **Skills**: Polymer, Python (or any other good prototyping language), routing algorithms, REST
-- **Mentor**: Max Lorenz
+- **Mentor**: Fabian Bormann
 
 ## Back end projects
+
+### Database service
+
+A database is the integral part of this framework. The service will be written in Golang, with either SQLite (for portable devices) or Postgres as back end. It's tasks are
+- Gathering data from
+  - OSM
+  - NASA (terrain information)
+  - Weather services
+  - Traffic services
+- Creating and updating databases
+- Making database queries and providing RPC and REST interfaces for the routing service
+- Managing queries (batch queries, ordering, queueing etc)
+
+The challenges are creating/updating the database, evaluating perfomance for different schemas, queries and caching strategies. Also, the service must be accessible via REST (to run standalone as a server) and is the main component for adminstration of the framework.
+
+- **Difficulty**: 5/5
+- **Skills**: Database (SQLite3/Postgres), Golang, REST/RPC, Query optimization
+- **Mentor**: Max Lorenz
+
+### Routing service
+
+### Native integration service
 
 ## Algorithms
 
 ## Mobile projects
+
+### React native app
+
+### Raspberry Pi navigation system
 
 ## Own ideas
