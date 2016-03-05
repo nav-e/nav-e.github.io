@@ -24,6 +24,9 @@ For the webapp, we would like to integrate information regarding weather, traffi
 
 This project aims to create a single web application with polymer to compare different routing algorithms. It gets the information from either a backend, the prototyping tool or both. The steps of each algorithm are shown on a map component, together with statistics and other performance characteristics. Results should be analyzed (eg. via R) and exportable to enable developers to measure their algorithms, compare them and create useful graphics for their papers.
 
+![Dijkstra's Algorithm](http://www.isp.uni-luebeck.de/~schoenfr/greennav/dijkstra.gif)
+![A* Algorithm](http://www.isp.uni-luebeck.de/~schoenfr/greennav/astar.gif)
+
 - **Difficulty**: Hard
 - **Skills**: Polymer, R, statistics, routing algorithms
 - **Mentor**: Max Lorenz
