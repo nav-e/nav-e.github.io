@@ -1,101 +1,88 @@
 <!doctype html>
 <html>
-	<head>
-	
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>	
-	
-	<link rel="import" href="bower_components/iron-ajax/iron-ajax.html">
-	<link rel="import" href="bower_components/iron-component-page/iron-component-page.html">
-	<link rel="import" href="bower_components/iron-pages/iron-pages.html">
-	<link rel="import" href="bower_components/iron-icons/iron-icons.html">
-	<link rel="import" href="bower_components/iron-image/iron-image.html">
-	<link rel="import" href="bower_components/iron-flex-layout/classes/iron-flex-layout.html">
-	<link rel="import" href="bower_components/paper-drawer-panel/paper-drawer-panel.html">
-	<link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
-	<link rel="import" href="bower_components/paper-scroll-header-panel/paper-scroll-header-panel.html">
-	<link rel="import" href="bower_components/paper-menu/paper-menu.html">
-	<link rel="import" href="bower_components/paper-menu/paper-submenu.html">
-	<link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
-	<link rel="import" href="bower_components/paper-button/paper-button.html">
-	<link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
-	
-	<link rel="import" href="bower_components/mark-down/mark-down.html">
-	
-	<link rel="import" href="github-markdown-files.html">
-	<link rel="import" href="github-wiki-folders.html">
-	
-	
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	
-	
-	<!-- <link rel="import" href="styles/app-theme.html"> -->
-	<link rel="stylesheet" href="styles/main.css">
-	
-	</head>
-	
-	<body class="fullbleed layout vertical">
-		
-		<template is="dom-bind">			
-		<github-wiki-folders folders="{{ folders }}" files="{{ files }}"></github-wiki-folders>
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>  
 
-			<paper-scroll-header-panel class="flex" fixed>
-				
-				<paper-drawer-panel flex>
-					
-					<paper-header-panel drawer>
+    <link rel="import" href="bower_components/iron-ajax/iron-ajax.html">
+    <link rel="import" href="bower_components/iron-component-page/iron-component-page.html">
+    <link rel="import" href="bower_components/iron-pages/iron-pages.html">
+    <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+    <link rel="import" href="bower_components/iron-image/iron-image.html">
+    <link rel="import" href="bower_components/iron-flex-layout/classes/iron-flex-layout.html">
+    <link rel="import" href="bower_components/paper-drawer-panel/paper-drawer-panel.html">
+    <link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
+    <link rel="import" href="bower_components/paper-scroll-header-panel/paper-scroll-header-panel.html">
+    <link rel="import" href="bower_components/paper-menu/paper-menu.html">
+    <link rel="import" href="bower_components/paper-menu/paper-submenu.html">
+    <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
+    <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="bower_components/mark-down/mark-down.html">
+    <link rel="import" href="github-markdown-files.html">
+    <link rel="import" href="github-wiki-folders.html">
 
-						<paper-toolbar flex>
-							<div class="title">
-								Menu
-							</div>
-						</paper-toolbar>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body class="fullbleed layout vertical">
+    <template id="app" is="dom-bind">      
+      <github-wiki-folders folders="{{ folders }}" files="{{ files }}"></github-wiki-folders>
+      <paper-scroll-header-panel class="flex" fixed>
+        <paper-drawer-panel flex>
+          
+          <paper-header-panel drawer>
+            <paper-toolbar flex>
+              <div class="title">Menu</div>
+            </paper-toolbar>
+            <paper-menu>
+              <template is="dom-repeat" items="{{ folders }}">            
+                <paper-submenu>
+                  <paper-item class="menu-trigger"> <paper-button> {{ item.name }} </paper-button> </paper-item>
+                  <paper-menu class="menu-content" selected="{{ selected }}" attr-for-selected="element">                               
+                    <template is="dom-repeat" items="{{ item.files }}">                     
+                      <a href="{{ item.link }}">
+                        <paper-icon-button icon="create"></paper-icon-button>
+                      </a>
+                      <paper-item element="{{ item }}">                     
+                        <paper-button>{{ item.name }}</paper-button>
+                      </paper-item>
+                      <br />
+                    </template>
+                  </paper-menu>
+                </paper-submenu>
+              </template>
+            </paper-menu>
+          </paper-header-panel>
 
-						<paper-menu>
-						<template is="dom-repeat" items="{{ folders }}">						
-						<paper-submenu>
-							<paper-item class="menu-trigger"> <paper-button> {{ item.name }} </paper-button> </paper-item>
-								<paper-menu class="menu-content" selected="{{ selected }}" attr-for-selected="element">																
-										<template is="dom-repeat" items="{{ item.files }}">											
-											<a href="{{ item.link }}">
-												<paper-icon-button icon="create"></paper-icon-button>
-											</a>
-											<paper-item element="{{ item }}">											
-												<paper-button>{{ item.name }}</paper-button>
-											</paper-item>
-											<br>
-										</template>
-								</paper-menu>
-						</paper-submenu>
-						</template>
-						</paper-menu>
-						
-					</paper-header-panel>
+          <paper-header-panel main>
+            <paper-toolbar flex>
+              <paper-icon-button icon="menu" paper-drawer-toggle>test</paper-icon-button>
+              <span class="title">GreenNav Project Wiki</span>
+              <span id="logo-holder">
+                <a href="https://www.isp.uni-luebeck.de/research/projects/green-navigation">
+                  <iron-image sizing="cover" style="height:50px;width:85px" src="https://www.isp.uni-luebeck.de/sites/all/themes/isp_zen/isp.png"></iron-image>
+                </a>
+              </span>
+            </paper-toolbar>
+            <div class="content" main flex>           
+              <iron-ajax auto handle-as="text" url="{{ selected.path }}" last-response="{{ markdown }}"></iron-ajax>
+              <mark-down text="{{ markdown }}"></mark-down>
+            </div>
+            <p>{{ selected.path }}</p>
+          </paper-header-panel>
 
-					<paper-header-panel main>
-						<paper-toolbar flex>
-							<paper-icon-button icon="menu" paper-drawer-toggle>test</paper-icon-button>
-							<span class="title">
-								GreenNav Project Wiki								
-							</span>
-							<span id="logo-holder">
-							<a href="https://www.isp.uni-luebeck.de/research/projects/green-navigation">
-								<iron-image sizing="cover" style="height:50px;width:85px" src="https://www.isp.uni-luebeck.de/sites/all/themes/isp_zen/isp.png"></iron-image>
-							</a>
-							</span>
-						</paper-toolbar>
-						<div class="content" main flex>						
-							<iron-ajax auto handle-as="text" url="{{ selected.path }}" last-response="{{ markdown }}"></iron-ajax>
-							<mark-down text="{{ markdown }}"></mark-down>
-						</div>
-					</paper-header-panel>
-						
-				</paper-drawer-panel>
-			</paper-scroll-header-panel>
-		</template>
-	
-	</body>
+        </paper-drawer-panel>
+      </paper-scroll-header-panel>
+    
+      <script>
+        var app = document.querySelector('#app');
+        app.selected = {
+          path: 'https://raw.githubusercontent.com/Greennav/greennav.github.io/master/wiki/Project-Ideas/Project-Ideas.md'
+        }; 
+      </script>
+    </template>
+  </body>
 </html>
