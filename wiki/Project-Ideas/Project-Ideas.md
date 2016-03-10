@@ -73,7 +73,7 @@ To use GreenNav on a portable device, the routing service needs information like
 
 - **Difficulty**: Easy
 - **Skills**: Golang, Raspberry Pi, Android (ARM), Hardware
-- **Mentor**: Jannes Feye
+- **Mentor**: Janis Feye
 
 ## Mobile projects
 
