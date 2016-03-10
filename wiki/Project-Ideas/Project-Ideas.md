@@ -10,7 +10,7 @@ The current webapp consists of different polymer elements. Before working on the
 
 - **Difficulty**: Easy
 - **Skills**: Polymer, GUI design
-- **Mentor**: Fabian Bormann
+- **Possible mentors**: Fabian Bormann
 
 ### Integration of new features
 
@@ -18,7 +18,7 @@ For the webapp, we would like to integrate information regarding weather, traffi
 
 - **Difficulty**: Easy
 - **Skills**: Polymer, GUI design
-- **Mentor**: Fabian Bormann
+- **Possible mentors**: Fabian Bormann
 
 ### Visualization tool
 
@@ -29,7 +29,7 @@ This project aims to create a single web application with polymer to compare dif
 
 - **Difficulty**: Hard
 - **Skills**: Polymer, R, statistics, routing algorithms
-- **Mentor**: Max Lorenz
+- **Possible mentors**: Max Lorenz
 
 ### Prototyping tool
 
@@ -37,7 +37,7 @@ The prototyping tool allows developers to design and test new routing algorithms
 
 - **Difficulty**: Hard
 - **Skills**: Polymer, Python (or any other good prototyping language), routing algorithms, REST
-- **Mentor**: Fabian Bormann
+- **Possible mentors**: Fabian Bormann
 
 ## Back end projects
 
@@ -57,7 +57,7 @@ The challenges are creating/updating the database, evaluating perfomance for dif
 
 - **Difficulty**: ~~Nightmare~~ Very hard
 - **Skills**: Database (SQLite3/Postgres), Golang, REST/RPC, Query optimization
-- **Mentor**: Max Lorenz
+- **Possible mentors**: Peter Schüllermann
 
 ### Routing service
 
@@ -65,7 +65,7 @@ This is the heart of the project. The routing service contains the algorithms (A
 
 - **Difficulty**: Medium
 - **Skills**: Golang, routing algorithms, REST
-- **Mentor**: Max Lorenz
+- **Possible mentors**: Max Lorenz
 
 ### Native integration service
 
@@ -73,7 +73,7 @@ To use GreenNav on a portable device, the routing service needs information like
 
 - **Difficulty**: Easy
 - **Skills**: Golang, Raspberry Pi, Android (ARM), Hardware
-- **Mentor**: Janis Feye
+- **Possible mentors**: Janis Feye
 
 ## Mobile projects
 
@@ -83,7 +83,7 @@ We decided to implement GreenNav as a web application and provide a responsive w
 
 - **Difficulty**: Hard
 - **Skills**: JavaScript ES6, React Native, Golang, Android, iOS
-- **Mentor**: Fabian Bormann
+- **Possible mentors**: Fabian Bormann
 
 ## Own ideas
 
@@ -91,4 +91,4 @@ You have a cool idea that is aligned with our vision (see the roadmap) but is no
 
 - **Difficulty**: Depends
 - **Skills**: Whatever is necessary
-- **Mentor**: [Mailing list](https://www.isp.uni-luebeck.de/mailman/listinfo/greennav)
+- **Possible mentors**: [Mailing list](https://www.isp.uni-luebeck.de/mailman/listinfo/greennav)
