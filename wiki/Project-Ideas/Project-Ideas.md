@@ -29,7 +29,7 @@ This project aims to create a single web application with polymer to compare dif
 
 - **Difficulty**: Hard
 - **Skills**: Polymer, R, statistics, routing algorithms
-- **Possible mentors**: Max Lorenz
+- **Possible mentors**: Florian Lenschow
 
 ### Prototyping tool
 
