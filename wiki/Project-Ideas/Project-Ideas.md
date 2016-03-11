@@ -69,25 +69,20 @@ This is the heart of the project. The routing service contains the algorithms (A
 
 ### Native integration service
 
-To use GreenNav in a vehicle or a portable device, the routing service needs information like battery status, speed or the location. In order to gather the information, this service should be easily adaptable to new architectures and provide a thin communication layer over the actual hardware.
-
-The service should provide the following features:
+To use GreenNav in a vehicle or a portable device, the routing service needs information like battery status, speed or the location. In order to gather the information, this service should be easily adaptable to new architectures and provide a thin communication layer over the actual hardware. The service should provide the following features:
 
 - Aquire and store data from a variety of sources (REST, RPC, UART, files etc.)
 - Provide an interface (REST and/or RPC) to control (start / stop), configure and monitor the aquisition of data from different sources
 - Enable simultaneous processing of different data sources (e.g. by utilizing goroutines)
 - Be extensible, new sources of data should be easy to add
 - Provide a way for listeners to register via REST, RPC and websocket and distribute updated data to them
-
- Lower prority features:
-
 - Provide a database to enable persistent storage or logging of resources
 - Priotize the aquisition and distribution of time critical data
 
- Possible Scenarios:
+#### Possible Scenarios
 
-- The service receives battery data over UART and reads a configuration containing physical properties of the vehicle, like weight and acceleration. Those resources are then requested by the routing service via REST to estimate the remaining range of the vehicle.
-- The service receives vehicle data over REST. A web based frontend showing the state of the vehicle registers as listener via websocket and has to be notfied, if a resource is changed. The data contains fast changing data, like the state of indicator lights.
+- The service receives battery data over UART and reads a configuration containing physical properties of the vehicle, like weight and acceleration. Those resources are then requested by the routing service via REST to estimate the remaining range of the vehicle
+- The service receives vehicle data over REST. A web based frontend showing the state of the vehicle registers as listener via websocket and has to be notfied, if a resource is changed. The data contains fast changing data, like the state of indicator lights
 - The service receives battery data over UART and is configured to log all values. A battery management service requests the log of the battery data  via REST and uses the data to monitor battery health and provide predictions of the amount of remaining charge.
 
 - **Difficulty**: Medium
