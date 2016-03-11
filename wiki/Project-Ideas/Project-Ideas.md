@@ -81,9 +81,9 @@ To use GreenNav in a vehicle or a portable device, the routing service needs inf
 
 #### Possible Scenarios
 
-- The service receives battery data over UART and reads a configuration containing physical properties of the vehicle, like weight and acceleration. Those resources are then requested by the routing service via REST to estimate the remaining range of the vehicle
-- The service receives vehicle data over REST. A web based frontend showing the state of the vehicle registers as listener via websocket and has to be notfied, if a resource is changed. The data contains fast changing data, like the state of indicator lights
-- The service receives battery data over UART and is configured to log all values. A battery management service requests the log of the battery data  via REST and uses the data to monitor battery health and provide predictions of the amount of remaining charge.
+- receiving battery data over UART and reading a configuration containing physical properties of the vehicle, like weight and acceleration. Those resources are then requested by the routing service via REST to estimate the remaining range of the vehicle
+- receiving vehicle data over REST. A web based frontend showing the state of the vehicle registers as listener via websocket and has to be notfied, if a resource is changed. The data contains frequently altering data like the state of indicator lights
+- receiving battery data over UART, being configured to log all values. A battery management service requests the log of the battery data via REST and uses the data to monitor battery health and provide predictions of the amount of remaining charge
 
 - **Difficulty**: Medium
 - **Skills**: Golang, Raspberry Pi, Hardware (UART), REST
