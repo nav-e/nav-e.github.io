@@ -1,75 +1,27 @@
-# GreenNav Web-App
+# GreenNav - Gettting Started
 
-This project aims to provide a reference implementation for the GreenNavigation front end. It makes use of the different polymer elements created for GreenNav.
-
-## Getting Started 
-## *FrontEnd*
-
-### Prerequisites
-
-- Install the latest version of Node.js and NPM 
-
-  For Mac OS X or Windows you can download the pre-build installers from https://nodejs.org/en/download/ .
-  If you use Linux we recommend to add Node.js to your sources. Eg. for Ubuntu based distributions the most up-to-date ppa   is provided by https://launchpad.net/~chris-lea/+archive/node.js/
-
-```zsh
-sudo add-apt-repository ppa:chris-lea/node.js  
-sudo apt-get update  
-sudo apt-get install nodejs
-```
-
-- Get bower
-
-```zsh
-sudo npm install -g bower
-(Windows: just npm install -g bower)
-```
-
-### Setup
-
-- Clone the repository
-- Install the dependencies
- 
-```zsh
-bower install
-```
+## Vision -     
+  To enable developers and users alike to use, extend and compose a flexible navigation system that runs anywhere.
   
-:heavy_exclamation_mark: To see an example route with a button click, fetch the routing service from [here](https://github.com/Greennav/service-routing) and run the local server (see corresponding README for instructions).
+## Architecure -    
 
-### Run
-
-You can use ```python -m SimpleHTTPServer``` but we prefer to use ```polyserve``` as it restarts on code changes
-
-```zsh
-sudo npm install polyserve -g 
-```
+There are two sides to the project:   
+Both the sides aim to be independant of each other and communicate with each other using REST/RPC.
+  1. **Frontend** -      
+      We want to provide drivers of electric vehicles with practical solutions, that is, with optimal driving direction for their route. For that we are developing a platform independent navigation system. The current implementation of frontend uses [Polymer](https://www.polymer-project.org/1.0/docs/start/reusableelements.html) elements and is made of many small components like :    
+    * Reference web app    
+    * Prototyping tool    
+    * Visualizer      
   
-Now you can simply run 
+  The complete webapp source and setup instructions can be found [here](https://github.com/Greennav/webapp)     
+  2. **Backend** -     
+      We want to develop tools for scientifically analyzing algorithmic solutions. For that we are developing tools for visualization of algorithms, for comparing their performance, we want to provide a generic API for custom algorithms and a lot more. Currently the backend is in the process of being rewritten using new tools and frameworks. The proposed architecture has the following components (links included) :     
+    * [Database service](https://github.com/Greennav/service-database)     
+    * [Native service](https://github.com/Greennav/service-native)     
+    * [Routing service](https://github.com/Greennav/service-routing)       
+    
+The complete roadmap can be found [here](https://github.com/Greennav/greennav.github.io/blob/master/wiki/Roadmap.md#roadmap)
+        
 
-```zsh
-polyserve -p 8000
-```
-  
-And the front end is now accessible at http://localhost:8000/.
 
-### Development
 
-#### Git Workflow
-
-- Please fork the repository
-- Clone the webapp repository from your github account
-```zsh
-git clone https://github.com/$(GITHUB_USER)/webapp.git
-```
-- Create a new feature branch
-```zsh
-cd webapp
-git checkout -b your-feature
-```
-- Make local changes and implement your feature 
-- Push your branch to GitHub
-- Open a pull request
-
-#### Create own elements
-
-In order to create a new reusable custom element to use here, check out the official guide at [the polymer   website](https://www.polymer-project.org/1.0/docs/start/reusableelements.html) and request a new repository. For examples, check out the different existing elements used in this project.
