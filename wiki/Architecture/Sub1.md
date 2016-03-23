@@ -1,2 +1,0 @@
-
-TODO describe sub architecture
