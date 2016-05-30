@@ -99,8 +99,15 @@ a {
     }
 
     &:hover {
-        color: $text-color;
+        color: $brand-color;
         text-decoration: underline;
+    }
+
+    &.sidebar-nav-item {
+        color: black;
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
 
