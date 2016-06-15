@@ -40,7 +40,7 @@ Keep a margin of the length of the diameter of the navigation icon around the lo
   <span>#ECEFF1</span>
 </div>
 
-When possible, constrain the number of colors used in the interface. Use the green color as the background color for the material design toolbar, buttons, as well as to underline certain paper-elements such as paper-tabs or paper-input.
+When possible, limit the number of colors used in the interface. Use the green color as the background color for the material design toolbar, buttons, as well as to underline certain paper-elements such as paper-tabs or paper-input.
 
 Use the orange color only to draw user's attention to critical details or alerts. Use the blue color to style elements when the green color is becoming too much.
 

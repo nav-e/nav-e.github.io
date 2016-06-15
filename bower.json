@@ -22,6 +22,7 @@
     "paper-header-panel": "PolymerElements/paper-header-panel#^1.1.6",
     "paper-drawer-panel": "PolymerElements/paper-drawer-panel#^1.0.9",
     "paper-item": "PolymerElements/paper-item#^1.2.1",
-    "paper-menu": "PolymerElements/paper-menu#^1.2.2"
+    "paper-menu": "PolymerElements/paper-menu#^1.2.2",
+    "paper-material": "PolymerElements/paper-material#^1.0.6"
   }
 }
