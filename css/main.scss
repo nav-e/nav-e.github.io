@@ -14,9 +14,9 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
+$text-color:       #000000;
 $background-color: #ECEFF1;
-$brand-color:      #126d39;
+$brand-color:      #1B5E20;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -27,8 +27,6 @@ $content-width:    800px;
 
 $on-palm:          600px;
 $on-laptop:        800px;
-
-
 
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -79,4 +77,80 @@ $on-laptop:        800px;
 .logo {
   height: 48px;
   margin-right: 20px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+}
+
+h2 {
+  margin-top: 30px;
+}
+
+.design-logo {
+  width: 600px;
+  display: block;
+  margin-bottom: 40px;
+}
+
+.design-color {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  color: white;
+  margin: 0 40px 40px 0;
+}
+
+.design-color span {
+  margin-left: 16px;
+  display: block;
+  padding-top: 100px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 30px;
+}
+
+.green {
+  background-color: #1B5E20;
+}
+
+.orange {
+  background-color: #F05D21;
+}
+
+.blue {
+  background-color: #2C5770;
+}
+
+.darkgrey {
+  background-color: #4A4A4A;
+  
+}
+
+.darkgrey span {
+  margin-left: 8px;
+}
+
+.lightgrey {
+  background-color: #ECEFF1;
+  color: #4A4A4A;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px solid #4A4A4A;
+}
+
+.lightgrey span {
+  margin-left: 12px;
+}
+
+.design-font {
+  display: inline-block;
+  font-size: 24px;
+  margin: 30px 60px 0 0;
+}
+
+.Roboto-Slab {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
 }
