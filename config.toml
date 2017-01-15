@@ -1,7 +1,7 @@
 siteTitle="GreenNav"
 baseColor = "#1B5E20"
 primaryColor = "#F05D21"
-linkPrefix = "/greennav"
+linkPrefix = ""
 developmentPages = [
   "/development/",
   "/development/getting-started/",
