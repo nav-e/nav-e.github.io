@@ -1,0 +1,55 @@
+.design-color {
+  display: inline-block;
+  width: 100px;
+  height: 80px;
+  color: white;
+  margin: 0 20px 20px 0;
+}
+
+.design-color span {
+  margin-left: 16px;
+  display: block;
+  padding-top: 40px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 16px;
+}
+
+.green {
+  background-color: #1B5E20;
+}
+
+.orange {
+  background-color: #F05D21;
+}
+
+.blue {
+  background-color: #2C5770;
+}
+
+.darkgrey {
+  background-color: #4A4A4A;
+}
+
+.lightgrey {
+  background-color: #ECEFF1;
+  color: #4A4A4A;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px solid #4A4A4A;
+}
+
+.lightgrey span {
+  margin-left: 12px;
+}
+
+.design-font {
+  display: inline-block;
+  font-size: 18px;
+  margin: 30px 60px 0 0;
+}
+
+.Roboto-Slab {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+}
