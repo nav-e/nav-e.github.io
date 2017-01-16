@@ -31,7 +31,7 @@ Run development environment
 
 ```zsh
 docker run -it --rm \
-  -v $(pwd):/srv -w="/srv" -p="80:80" \
+  -v $(pwd):/srv -w="/srv" -p="8000:8000" \
   6e6a/docker-gatsbyjs /bin/sh -c \
   'cd /srv && npm update && gatsby develop'
 ```
@@ -40,7 +40,7 @@ Build for deployment
 
 ```zsh
 docker run -it --rm \
-  -v $(pwd):/srv -w="/srv" -p="80:80" \
+  -v $(pwd):/srv -w /srv \
   6e6a/docker-gatsbyjs /bin/sh -c \
   'cd /srv && npm update && gatsby build --prefix-links'
 ```
