@@ -27,28 +27,23 @@
 
 ## Installation with docker
 
-Prepare the image
+Run development environment
 
 ```zsh
-cd docker
-docker build -t greennav-wiki . # only required once
-cd ..
+docker run -it --rm \
+  -v $(pwd):/srv -w="/srv" -p="80:80" \
+  6e6a/docker-gatsbyjs /bin/sh -c \
+  'cd /srv && npm update && gatsby develop'
 ```
 
-Start the development environment
+Build for deployment
 
 ```zsh
-docker run -it -v $(pwd):/data -p 8000:8000 greennav-wiki
+docker run -it --rm \
+  -v $(pwd):/srv -w="/srv" -p="80:80" \
+  6e6a/docker-gatsbyjs /bin/sh -c \
+  'cd /srv && npm update && gatsby build --prefix-links'
 ```
-
-Then in the container do
-
-```zsh
-cd /data
-npm update
-gatsby develop
-```
-Now the site is up and re-builds upon changes. The whole process could be fully automated.
 
 ## Edit Documentation
 
