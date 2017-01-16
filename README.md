@@ -25,6 +25,31 @@
 
 - Open site in browser at `localhost:8000` and make your changes.
 
+## Installation with docker
+
+Prepare the image
+
+```zsh
+cd docker
+docker build -t greennav-wiki . # only required once
+cd ..
+```
+
+Start the development environment
+
+```zsh
+docker run -it -v $(pwd):/data -p 8000:8000 greennav-wiki
+```
+
+Then in the container do
+
+```zsh
+cd /data
+npm update
+gatsby develop
+```
+Now the site is up and re-builds upon changes. The whole process could be fully automated.
+
 ## Edit Documentation
 
 - Each page is in its own markdown file in the pages directory. If you want to make changes to a page, just edit the corresponding Markdown file.
