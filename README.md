@@ -25,6 +25,26 @@
 
 - Open site in browser at `localhost:8000` and make your changes.
 
+## Installation with docker
+
+Run development environment
+
+```zsh
+docker run -it --rm \
+  -v $(pwd):/srv -w /srv -p 8000:8000 \
+  6e6a/docker-gatsbyjs /bin/sh -c \
+  'npm update && gatsby develop'
+```
+
+Build for deployment
+
+```zsh
+docker run -it --rm \
+  -v $(pwd):/srv -w /srv \
+  6e6a/docker-gatsbyjs /bin/sh -c \
+  'npm update && gatsby build --prefix-links'
+```
+
 ## Edit Documentation
 
 - Each page is in its own markdown file in the pages directory. If you want to make changes to a page, just edit the corresponding Markdown file.
