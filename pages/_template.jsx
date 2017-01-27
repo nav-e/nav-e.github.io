@@ -31,9 +31,6 @@ const Template = (props) => {
 
   const STYLE = {
     link: {
-      background: docsActive ? activeColors.bg : colors.bg,
-      borderBottom: docsActive ? `2px solid ${config.primaryColor}` : "",
-      color: docsActive ? activeColors.fg : colors.fg,
       textDecoration: 'none',
       paddingLeft: rhythm(1/2),
       paddingRight: rhythm(1/2),
@@ -51,7 +48,6 @@ const Template = (props) => {
         to={prefixLink('/news/')}
         style={{
           ...STYLE.link,
-          background: newsActive ? activeColors.bg : colors.bg,
           borderBottom: newsActive ? `2px solid ${config.primaryColor}` : "",
           color: newsActive ? activeColors.fg : colors.fg,
         }}
@@ -62,7 +58,6 @@ const Template = (props) => {
         to={prefixLink('/docs/')}
         style={{
           ...STYLE.link,
-          background: docsActive ? activeColors.bg : colors.bg,
           borderBottom: docsActive ? `2px solid ${config.primaryColor}` : "",
           color: docsActive ? activeColors.fg : colors.fg,
         }}
@@ -73,7 +68,6 @@ const Template = (props) => {
         to={prefixLink('/development/')}
         style={{
           ...STYLE.link,
-          background: devActive ? activeColors.bg : colors.bg,
           borderBottom: devActive ? `2px solid ${config.primaryColor}` : "",
           color: devActive ? activeColors.fg : colors.fg,
         }}
@@ -114,14 +108,9 @@ const Template = (props) => {
           style={{
             background: colors.bg,
             color: colors.fg,
-            marginBottom: rhythm(1.5),
           }}
         >
-          <Container
-            style={{
-              maxWidth: 960,
-            }}
-          >
+          <Container>
             <Grid columns={12}>
               <Breakpoint minWidth={700} widthMethod="componentWidth">
                 <Span
@@ -159,15 +148,7 @@ const Template = (props) => {
             </Grid>
           </Container>
         </div>
-        <Container
-          style={{
-            maxWidth: 960,
-            padding: `${rhythm(1)} ${rhythm(3/4)}`,
-            paddingTop: 0,
-          }}
-        >
-          {props.children}
-        </Container>
+        {props.children}
       </div>
     </MuiThemeProvider>
   )
