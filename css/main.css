@@ -1,3 +1,15 @@
+body {
+  background: #ECEFF1;
+}
+
+a {
+  color: #1B5E20;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 .design-color {
   display: inline-block;
   width: 100px;

@@ -37,16 +37,6 @@ module.exports = React.createClass({
           <TypographyStyle typography={typography} />
           <GoogleFont typography={typography} />
           {css}
-          <style
-            dangerouslySetInnerHTML={{
-              __html:
-                `
-                  a {
-                    color: ${colors.bg};
-                  }
-                `,
-            }}
-          />
         </head>
         <body>
           <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
