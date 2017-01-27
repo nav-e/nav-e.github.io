@@ -10,7 +10,7 @@ import typography from 'utils/typography'
 
 import { config } from 'config'
 import Divider from 'material-ui/Divider'
-import GnLogo from 'pages/images/GN_logo_green2.png'
+import GnLogo from 'pages/images/GN_logo_green.png'
 
 // Import styles.
 import 'css/main.css'
@@ -93,11 +93,10 @@ const Template = (props) => {
       style={{
         textDecoration: 'none',
         color: colors.fg,
-        fontSize: adjustFontSizeTo('25.5px').fontSize,
       }}
       to={prefixLink('/')}
     >
-      <img alt={config.siteTitle} src={GnLogo} />
+      <img src={GnLogo} style={{ height: 50, margin: 0 }} />
     </Link>
   )
 
@@ -110,43 +109,19 @@ const Template = (props) => {
             color: colors.fg,
           }}
         >
-          <Container>
-            <Grid columns={12}>
-              <Breakpoint minWidth={700} widthMethod="componentWidth">
-                <Span
-                  columns={6}
-                  style={{
-                    height: 50,
-                  }}
-                >
-                  {logo}
-                </Span>
-                <Span columns={6} last>
-                  {links}
-                </Span>
-              </Breakpoint>
-              <Breakpoint maxWidth={700} widthMethod="componentWidth">
-                <Span
-                  columns={12}
-                  style={{
-                    height: 50,
-                    textAlign: "center"
-                  }}
-                >
-                  {logo}
-                </Span>
-                <Span
-                  columns={12}
-                  style={{
-                    height: 50,
-                    textAlign: "center"
-                  }}
-                >
-                  {links}
-                </Span>
-              </Breakpoint>
-            </Grid>
-          </Container>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+              alignItems: "center",
+              maxWidth: 980,
+              margin: "0 auto"
+            }}
+          >
+            <div>{logo}</div>
+            <div>{links}</div>
+          </div>
         </div>
         {props.children}
       </div>
