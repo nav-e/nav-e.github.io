@@ -10,6 +10,18 @@ a:hover {
   text-decoration: underline;
 }
 
+.content {
+  display: flex;
+  flex: 1 0;
+  flex-direction: column;
+  max-width: 980px;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .design-color {
   display: inline-block;
   width: 100px;

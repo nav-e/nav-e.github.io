@@ -42,7 +42,7 @@ const Template = (props) => {
   })
 
   return (
-    <div>
+    <div className="content">
       <Breakpoint
         mobile
       >
