@@ -29,7 +29,7 @@ Fabian keeps an eye on the big plan. He is also the one who initiated our partic
 
 https://github.com/tom3012
 
-Thomas is our specialist when it comes to beautiful designs. He created the documentation pages and the style guide for GreenNav. He started his participation on GreenNav as a student in the Google Summer of Code 2016.
+Thomas is our specialist when it comes to beautiful designs. He created the documentation pages and started his participation on GreenNav as a student in the Google Summer of Code 2016.
 
 <img alt="René Schönfelder" style="float: right; width: 20%" src="https://avatars1.githubusercontent.com/u/9591136?v=3&s=460" />
 
@@ -38,4 +38,3 @@ Thomas is our specialist when it comes to beautiful designs. He created the docu
 https://github.com/schoenfr
 
 René has been the longest with the project. In 2012 he started his research at the University of Lübeck on algebraic routing algorithms. Now he is a software engineer working in a huge IT company. In his free time, he loves to try out new coding ideas.
-
