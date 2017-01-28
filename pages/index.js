@@ -5,9 +5,9 @@ import DocumentTitle from 'react-document-title'
 
 import Divider from 'material-ui/Divider'
 import Paper from 'material-ui/Paper'
+import GnLogoWhite from 'pages/images/GN_logo_white_t.png'
+import HeaderImg from 'pages/images/road.jpeg'
 
-
-const headImgUrl = "../images/road.jpeg"
 
 const STYLES = {
   content: {
@@ -16,7 +16,7 @@ const STYLES = {
     fontSize: "1.2em"
   },
   headImg: {
-    background: `url('${headImgUrl}') center center`,
+    background: `url('${HeaderImg}') center center`,
     backgroundSize: "cover",
     color: "white",
     paddingLeft: "15px",
@@ -37,7 +37,7 @@ const Index = () => (
 
       <div style={STYLES.headImg}>
         <Paper style={{ opacity: 0.85, maxWidth: 600, margin: "50px auto 150px auto" }} zDepth={5}>
-          <img style={{ margin: "auto" }} src="images/GN_logo_white_t.png"/>
+          <img style={{ margin: "auto" }} src={GnLogoWhite}/>
         </Paper>
       </div>
 
