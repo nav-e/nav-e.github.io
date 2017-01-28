@@ -9,11 +9,10 @@
   npm install -g gatsby
   ```
 
-- Go to repo directory. Checkout _source_ branch first to make changes! Then install dependencies.
+- Go to repo directory and install dependencies.
 
   ```shell
   cd  greennav.github.io
-  git checkout source  # Important !!!
   npm install
   ```
 
@@ -40,19 +39,4 @@
 
 - Note that the documentation repo is ready for [material-ui](http://www.material-ui.com/#/)! So if you want to use any component, do it!
 
-- After editing any content make a pull-request. Remember that you are still on _source_ branch. That's fine! If we will accept your PR, we will publish your changes to master branch.
-
---------------------------------------------------------------------------------
-
-_Note:_ The following instructions are **only** relevant for members with write access to the repository!
-
-## Build and Deploy
-
-- If you are done and satisfied with your work commit and push your changes.
-- Build the documentation with:
-
-  ```shell
-  gatsby build --prefix-links
-  ```
-
-- The project will now build to _public_ directory. Remember that you are still on _source_ branch. That's fine! All you have to do now is to move the content of _public_ to the root of the _master_ branch and commit and push again (now from master branch). That's it.
+- After editing any content make a pull-request. We are using [Netlify](https://www.netlify.com/) to automatically deploy our documentation, so if your PR is accepted you should see your changes briefly.
