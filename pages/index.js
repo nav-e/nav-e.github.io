@@ -45,9 +45,9 @@ const Index = () => (
         <section style={STYLES.section}>
           <h1>The Community</h1>
           <p>
-            The GreenNav organization is a community of young researchers and students at the University
-            of Lübeck. We decided not long ago to go open source in order to collaborate with others and
-            to show what we are working on.
+            The GreenNav organization is a community of students and young professionals working on navigation ideas
+            for sustainable mobility. We love to collaborate in the open source environment
+            by prototyping new ideas and showing our results to the public.
           </p>
           <p>
             The projects of the GreenNav organization are closely related to the student projects at the
