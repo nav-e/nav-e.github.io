@@ -13,4 +13,6 @@ developmentPages = [
 docPages = [
   "/docs/",
   "/docs/getting-started/",
+  "/docs/ideas-page/",
+  "/docs/board/",
 ]
