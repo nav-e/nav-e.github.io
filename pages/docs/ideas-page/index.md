@@ -87,3 +87,21 @@ Here are some visualizations we want to create:
 *Estimation of difficulty*: Average, can be tailored to fit the student's prior knowledge.
 
 *Potential mentor*: René
+
+## Public Transportation with GreenNav
+
+This is about your creative ideas. There are many ways to make sustainable mobility more efficient, more comfortable, more reliable. 'Intermodality' describes a route, in which you combine different kinds of transportation. Because electric vehicles are limited in range, a combination with rail traffic would be ideal. Let us hear about your suggestion, how this could be achieved.
+
+<div style="text-align:center">
+<img style="width:70%" src="ideas_page_intermodality.png"/>
+</div>
+
+##### Further Information
+
+*Prerequisites*: Depends on your idea
+
+*Tools and Frameworks*: It should fit our setting of Javascript/ReactJS on the frontend and maybe NodeJS or Java/Scala in the backend.
+
+*Estimation of difficulty*: Depends, average to difficult.
+
+*Potential mentor*: Max, Fabian, René
