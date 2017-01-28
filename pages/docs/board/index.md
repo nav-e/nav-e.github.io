@@ -31,6 +31,14 @@ https://github.com/tom3012
 
 Thomas is our specialist when it comes to beautiful designs. He created the documentation pages and started his participation on GreenNav as a student in the Google Summer of Code 2016.
 
+<img alt="René Schönfelder" style="float: right; width: 20%" src="https://avatars2.githubusercontent.com/u/4853920?v=3&s=460" />
+
+### Florian Lenschow
+
+https://github.com/Flow42
+
+Even though Flo stays more in the background, from time to time he comes up with surprisingly good stuff. Together with the Max and Fabian, he pushed towards going open source and building up a community.
+
 <img alt="René Schönfelder" style="float: right; width: 20%" src="https://avatars1.githubusercontent.com/u/9591136?v=3&s=460" />
 
 ### René Schönfelder
