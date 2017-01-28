@@ -5,6 +5,8 @@ title: Ideas Page
 
 Here is a collection of ideas, that we possibly want to work on in the future. We are also applying for this year's Google Summer of Code, so we also describe the projects in that context. The ideas are not ordered in any particular way.
 
+For reference, this is [last year's ideas page](/news/2016-05-29-gosc2016/).
+
 ## Mocking the CAN Bus
 
 The CAN bus is a protocol, that microcontrollers in a vehicle use to communicate. By connecting to the bus, we get access to a wide range of information about the vehicle. The most interesting one is the current energy consumption, which we could use to learn and better predict the vehicle's range.
@@ -88,9 +90,26 @@ Here are some visualizations we want to create:
 
 *Potential mentor*: René
 
-## Public Transportation with GreenNav
+## Charging Stations / Points of Interest
 
-This is about your creative ideas. There are many ways to make sustainable mobility more efficient, more comfortable, more reliable. 'Intermodality' describes a route, in which you combine different kinds of transportation. Because electric vehicles are limited in range, a combination with rail traffic would be ideal. Let us hear about your suggestion, how this could be achieved.
+Charging stations are still quite sparse in many regions. Drivers of electric vehicle sometimes need to plan carefully for longer trips. We want to provide the user directly with information about loading station in the proximity of the chosen route.
+
+Furthermore, GreenNav is also about sustainable and green lifestyle, so we might also add highlighting and information about sustainable clothing shops, biological food markets, or any other location, that our user group is interested in.  
+
+##### Further Information
+
+*Prerequisites*: Basic knowledge in data processing to integrate the relevant information (ideally with OSM) into our database.
+
+*Tools and Frameworks*: OSM, Javascript/ReactJS.
+
+*Estimation of difficulty*: Average to difficult.
+
+*Potential mentor*: Max, Fabian, René
+
+
+## Intermodality with GreenNav
+
+This is about your creative ideas. There are many ways to make sustainable mobility more efficient, more comfortable, more reliable. *Intermodality* describes a route, in which you combine different kinds of transportation. Because electric vehicles are limited in range, a combination with rail traffic would be ideal. Let us hear about your suggestion, how this could be achieved.
 
 <div style="text-align:center">
 <img style="width:70%" src="ideas_page_intermodality.png"/>
