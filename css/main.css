@@ -10,6 +10,14 @@ body {
   background: #ECEFF1;
 }
 
+:focus {
+  outline: none;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
 .footer {
   position: absolute;
   right: 0;
