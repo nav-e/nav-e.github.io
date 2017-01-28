@@ -56,7 +56,7 @@ const Index = () => (
           </p>
           <p>
             Because the GreenNav organization is not funded, the contributions are mostly done by
-            volunteers. The
+            volunteers.
             The <a
               href="http://www.isp.uni-luebeck.de/staff/schoenfr"
             >project manager <i className="fa fa-external-link" /></a> is a PhD student researching on routing problems
