@@ -53,12 +53,12 @@ In order to maintain our web interfaces clean, please use only Roboto in them, a
 
 Use Roboto Slab only to emphasize HTML heading elements in the wiki.
 
-<div class="design-font"><span class="title Roboto">Roboto (300)</span><br>
+<div><span class="title Roboto">Roboto (300)</span><br>
   <span>ABCDEFGHIJKLMNOPQRSTUVWXYZ</span><br>
   <span>abcdefghijklmnopqrstuvwxyz</span><br>
   <span>0123456789</span></div>
 
-<div class="design-font Roboto-Slab"><span class="title">Roboto Slab (700)</span><br>
+<div class="Roboto-Slab" style="margin: 25px auto;"><span class="title">Roboto Slab (700)</span><br>
   <span>ABCDEFGHIJKLMNOPQRSTUVWXYZ</span><br>
   <span>abcdefghijklmnopqrstuvwxyz</span><br>
   <span>0123456789</span></div>
