@@ -15,22 +15,43 @@ Because working on the actual hardware is a little out of scope, we want to buil
 
 The highlighted components in this diagram are part of this idea. The GPS mock is quite simple and already exists.
 
+##### Further Information
+
+*Prerequisites*: Some experience in micro controller programming, further programming skills in Javascript/ReactJS, basic understanding of the CAN bus and how to read information from it.
+
+*Tools and Frameworks*: ReactJS, some micro controller.
+
+*Estimation of difficulty*: Average.
+
+*Potential mentor*: Max, Janis
+
+
 ## Range Computation
 
 Probably the most important information for customers buying electriv vehicles is the range of the vehicle. Because recharging takes longer than refueling a combustion engined vehicle, the fear of running out of energy is emergent. This is called range anxiety and we want to solve that problem!
 
-One important step towards a solution is a precise computation and visualization of the vehicles range. This idea is about making visualization more succinct. What's the use in just having a circle of a particular diameter? We want to show the driver a beautiful polygon 
+One important step towards a solution is a precise computation and visualization of the vehicles range. This idea is about making visualization more succinct. What's the use in just having a circle of a particular diameter? We want to show the driver a beautiful polygon.
 
 <div style="text-align: center">
 <img style="width: 60%" alt="Range Computation" src="ideas_page_range.png" />
 </div>
 
-This range polygon was created by segmenting the search space into 32 slices and taking the most distant vertex in each segment. Those are connected to form the polygon. This quite simple method is okay for starters, but there are various problems with that:
+This range polygon was created by segmenting the search space into 32 slices and taking the most distant vertex in each segment. Those are connected to form the polygon. This quite naive method is okay for starters, but there are various problems that we want to solve:
 
 - Some places may be mistakenly marked as reachable, especially in mountainous areas.
 - Some places may be mistakenly marked as non-reachable, because the slicing simplifies the polygon too much.
 - The reachability decision is binary, but of of course some places can be reached with a lesser probability, for example those at the border of the polygon.
 - Actually, two polygons are interesting: We want to see which places we can reach, and we also want to see a polygon describing the places that we can reach and also return home from, which is approximately half as big.
+
+##### Further Information
+
+*Prerequisites*: Knowledge about geographic coordinates and their transformations, programming skills in Javascript/ReactJS, basic understanding of the needs of electric vehicle drivers.
+
+*Tools and Frameworks*: Javascript, ReactJS.
+
+*Estimation of difficulty*: Easy to average.
+
+*Potential mentor*: Fabian
 
 ## Routing Benchmarks
 
@@ -57,3 +78,12 @@ Here are some visualizations we want to create:
 <img style="width: 80%" alt="Example Efficiency Plot" src="ideas_page_benchmark_plot.png" />
 </div>
 
+##### Further Information
+
+*Prerequisites*: Interest in scientific benchmarking, programming skills in Java/Scala, basic understanding of the JVM.
+
+*Tools and Frameworks*: JConsole, JVM, ReactJS, some chart library (e.g. react-chartjs).
+
+*Estimation of difficulty*: Average, can be tailored to fit the student's prior knowledge.
+
+*Potential mentor*: René
