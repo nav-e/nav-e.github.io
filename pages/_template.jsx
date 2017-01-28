@@ -100,30 +100,52 @@ const Template = (props) => {
     </Link>
   )
 
+  const header = (
+    <div
+      style={{
+        background: colors.bg,
+        color: colors.fg,
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-between",
+          alignItems: "center",
+          maxWidth: 980,
+          margin: "0 auto"
+        }}
+      >
+        <div>{logo}</div>
+        <div>{links}</div>
+      </div>
+    </div>
+  )
+
+  const footer = (
+    <div className="footer">
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-between",
+        }}
+      >
+        <div>
+          Deployed by <a href="https://www.netlify.com/" style={{ color: "white" }}>Netlify</a>
+        </div>
+        <div><i className="fa fa-copyright fa-lg" /> 2017 GreenNav</div>
+      </div>
+    </div>
+  )
+
   return (
     <MuiThemeProvider>
       <div>
-        <div
-          style={{
-            background: colors.bg,
-            color: colors.fg,
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              justifyContent: "space-between",
-              alignItems: "center",
-              maxWidth: 980,
-              margin: "0 auto"
-            }}
-          >
-            <div>{logo}</div>
-            <div>{links}</div>
-          </div>
-        </div>
+        {header}
         {props.children}
+        {footer}
       </div>
     </MuiThemeProvider>
   )
