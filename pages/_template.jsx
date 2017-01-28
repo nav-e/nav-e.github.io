@@ -135,6 +135,29 @@ const Template = (props) => {
         <div>
           Deployed by <a href="https://www.netlify.com/" style={{ color: "white" }}>Netlify</a>
         </div>
+
+        <div>
+          Join us:
+          <a
+            style={{
+              color: "white",
+              paddingLeft: rhythm(1/2),
+            }}
+            href="https://plus.google.com/u/0/communities/110704433153909631379"
+          >
+            <i className="fa fa-google-plus fa-lg" />
+          </a>
+          <a
+            style={{
+              color: "white",
+              paddingLeft: rhythm(1/2),
+            }}
+            href="https://github.com/Greennav"
+          >
+            <i className="fa fa-github fa-lg" />
+          </a>
+        </div>
+
         <div><i className="fa fa-copyright fa-lg" /> 2017 GreenNav</div>
       </div>
     </div>

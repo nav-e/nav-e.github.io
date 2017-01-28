@@ -10,6 +10,14 @@ body {
   background: #ECEFF1;
 }
 
+:focus {
+  outline: none;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
 .footer {
   position: absolute;
   right: 0;
@@ -84,12 +92,6 @@ a:hover {
 
 .lightgrey span {
   margin-left: 12px;
-}
-
-.design-font {
-  display: inline-block;
-  font-size: 18px;
-  margin: 30px 60px 0 0;
 }
 
 .Roboto-Slab {
