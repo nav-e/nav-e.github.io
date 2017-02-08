@@ -14,5 +14,6 @@ docPages = [
   "/docs/",
   "/docs/getting-started/",
   "/docs/ideas-page/",
+  "/docs/proposal-template/",
   "/docs/board/",
 ]
