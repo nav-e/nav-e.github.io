@@ -45,7 +45,7 @@ const Index = () => (
         <section style={STYLES.section}>
           <h1>About Green Navigation</h1>
           <p>
-            Green Navigation (also: GreenNav) is an open source organization that emerged from an university project at the University of Lübeck, but is now independent. Our organization’s aim is to find the most energy efficient route for electric vehicles while providing a framework for new routing approaches.
+            Green Navigation (also: GreenNav) is an open source organization that emerged from a university project at the University of Lübeck, but is now independent. Our organization’s aim is to find the most energy efficient route for electric vehicles while providing a framework for new routing approaches.
           </p>
           <p>
             Even though there are existing routing services out there, we aim to support sustainable means of transportation. None of the other routing services considers aspects such as a prediction of the energy consumption of different electric vehicles, their battery capacity, and uncertainties arising from driving behavior or the environment, yet. Especially in the open source environment, nothing similar is to be found.
