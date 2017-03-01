@@ -60,7 +60,7 @@ const Index = () => (
         <section style={STYLES.section}>
           <h1>Participation in the Google Summer of Code 2016</h1>
           <p>
-            GreenNav’s participation in the Google Summer of Code 2016 was a success for the project’s development. Thanks to the contributions, the front end is working properly. Still, we are still working on our back end for which everyone is invited to participate! Everything can be found on [GitHub](github.com/greennav).
+            GreenNav’s participation in the Google Summer of Code 2016 was a success for the project’s development. Thanks to the contributions, the front end is working properly. Still, we are still working on our back end for which everyone is invited to participate! Everything can be found on <a style={{ color: "white" }} href="https://github.com/Greennav">GitHub <i className="fa fa-external-link" /></a>.
           </p><p>
             Moreover, the project is published under the Apache License 2.0. This basically means that everyone is free to use and redistribute the software, but any original copyright, patent, trademark, and attribution notices must be preserved.
           </p>
