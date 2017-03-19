@@ -124,3 +124,21 @@ This is about your creative ideas. There are many ways to make sustainable mobil
 *Estimation of difficulty*: Depends, average to difficult.
 
 *Potential mentor*: Max, Fabian, René
+
+
+## Prediction of energy consumption of electric vehicles
+
+Since electric vehicles are the focus of GreenNav, it would be very useful to have a precise model, that is able to predict the energy
+consumption of certain types of vehicles regarding the parameters of the taken route.
+Hence we would like to utilize machine learning methods to solve this task. The main challenge at this, is to find suitable data for training and testing
+as well as deriving an architecture, that is able to precisely predict the energy consumption on various routes and vehicle models. 
+
+##### Further Information
+
+*Prerequisites*: Experience in machine learning, knowledge in the framework of your choice
+
+*Tools and Frameworks*: Machine learning framework of your choice (using keras is suggested).
+
+*Estimation of difficulty*: average to difficult.
+
+*Potential mentor*: Florian
