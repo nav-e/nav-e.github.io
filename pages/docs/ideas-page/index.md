@@ -55,7 +55,7 @@ The highlighted components in this diagram are part of this idea. The GPS mock i
 
 *Estimation of difficulty*: Average.
 
-*Potential mentor*: Janis, Florian
+*Potential mentor*: Janis, Fabian
 
 
 ## A Solution for Range Anxiety
