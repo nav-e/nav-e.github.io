@@ -199,4 +199,4 @@ One big reason for the GreenNav project to exist is that there are no dedicated 
  
 *Estimation of difficulty*: Beginner to average
 
-*Potential mentor*: Bruno, Sebastian, Florian
+*Potential mentor*: Bruno, Fabian, Sebastian
