@@ -8,6 +8,8 @@ tags:
   - gsoc
 ---
 
+# Announcement GSoC 2017
+
 We are happy to announce that Green Navigation is participating in this year's Google Summer of Code again! 
 Thanks to last year's contributions, we made substantial progress with our front end and aim to focus on our back end this year.
 
