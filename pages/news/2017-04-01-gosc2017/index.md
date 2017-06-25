@@ -8,7 +8,7 @@ tags:
   - gsoc
 ---
 
-#Announcement GSoC 2017
+# Announcement GSoC 2017
 
 We are happy to announce that Green Navigation is participating in this year's Google Summer of Code again! 
 Thanks to last year's contributions, we made substantial progress with our front end and aim to focus on our back end this year.
@@ -26,4 +26,4 @@ Furthermore, we aim to be completely open source, which is why we moved to Gitte
 Thanks again to everyone who has contributed last year. You are all welcome to help us working on this year's goals.
 
 Join us on [Gitter](https://gitter.im/greennav/)
-and [Google+] (https://plus.google.com/communities/110704433153909631379)!
+and [Google+](https://plus.google.com/communities/110704433153909631379)!
