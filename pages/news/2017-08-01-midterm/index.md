@@ -2,7 +2,7 @@
 title: GSoC 2017: Midterm Status Report
 date: '2017-08-01T00:00:00.284Z'
 layout: post
-path: /news/2017-08-01-midterm
+path: /news/2017-08-01-midterm/
 tags:
   - google
   - gsoc
