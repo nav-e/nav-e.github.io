@@ -38,10 +38,7 @@ the addition of an OpenLayer Control to display the location picker coordinates.
 
 This is what it looks like at the moment: 
 
-
-
-
-
+![screenshot](https://user-images.githubusercontent.com/25430929/28843971-6f39fb52-7703-11e7-8c1b-b880176dc697.png)
 
 # Samya Suvarna: Traffic Avoidance  
 **Category:** Experimental  
