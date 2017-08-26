@@ -24,9 +24,9 @@ This post is about my GSoC project, under Greennav organization, on the implemen
 
 ## Final Product
 
-  * #### Repository
+  * #### [Repository](https://github.com/iNeil77/machine-learning)
 
-  * #### Commits
+  * #### [Commits](https://github.com/iNeil77/machine-learning/commits/master)
 
   * #### [Kanban Board](https://github.com/orgs/Greennav/projects/6)
 
