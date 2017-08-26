@@ -20,7 +20,7 @@ This post is about my GSoC project, under Greennav organization, implementing Tr
 
 ### Proposal link
 
-[Traffic avoidance and prediction of energy consumption of electric vehicles with real time notification system](https://summerofcode.withgoogle.com/serve/4528822631268352/)
+[Traffic avoidance and prediction of energy consumption of electric vehicles with real time notification system](https://github.com/Greennav/greennav.github.io/files/1253903/Saumya_Suvarna_Proposal_GSoC2017.pdf)
 
 ## Final Product
 

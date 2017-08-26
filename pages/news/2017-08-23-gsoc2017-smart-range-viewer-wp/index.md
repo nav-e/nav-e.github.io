@@ -20,7 +20,7 @@ This post is about my GSoC project, under Greennav organization, implementing Sm
 
 ### Proposal link
 
-[Smart Range Viewer](https://summerofcode.withgoogle.com/serve/5186012622880768/)
+[Smart Range Viewer](https://github.com/Greennav/greennav.github.io/files/1253906/Ong_Jia_Rui_Proposal_GSoC2017.pdf)
 
 ## Final Product
 
