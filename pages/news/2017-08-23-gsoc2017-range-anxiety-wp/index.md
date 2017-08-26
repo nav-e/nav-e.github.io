@@ -12,7 +12,7 @@ tags:
 ### Implementing Range Anxiety, by Leah Chrestien
 
 **Category:** Algorithm  
-**Mentors:** Bruno Magalhaes, René Schönfelder
+**Mentors:** Bruno Magalhães, René Schönfelder
 
 ## Overview
 
@@ -20,7 +20,7 @@ This post is about my GSoC project, under Greennav organization, implementing Ra
 
 ### Proposal link
 
-[A Medication for e-range anxiety](https://summerofcode.withgoogle.com/serve/4562469270847488/)
+[A Medication for e-range anxiety](https://github.com/Greennav/greennav.github.io/files/1253907/Leah_Chrestien_Proposal_GSoC2017.pdf)
 
 ## Final Product
 

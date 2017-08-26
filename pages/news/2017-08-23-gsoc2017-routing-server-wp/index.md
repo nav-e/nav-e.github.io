@@ -20,7 +20,7 @@ This post is about my GSoC project, under Greennav organization, implementing th
 
 ### Proposal link
 
-[Routing server](https://summerofcode.withgoogle.com/serve/5836956255649792/)
+[Routing server](https://github.com/Greennav/greennav.github.io/files/1253904/Pavel_Danilov_Proposal_GSoC2017.pdf)
 
 ## Final Product
 
