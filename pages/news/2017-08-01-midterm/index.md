@@ -23,9 +23,10 @@ Since recharging an electric vehicle takes longer than refueling a combustion en
 First of all, all the coordinates forming nodes are assigned a unique key, which acts as an identifier. Then, a starting location is chosen, based on which the range will be determined. The haversine formula is used to determine the geographic
 distance between any two coordinates and at any step, the haversine function is called with four input parameters (latitude 1, longitude 1, latitude 2, longitude 2) and returns the geographic distance between the coordinates - the value of range is set. 
 This enables the algorithm to select nodes at that particular distance from the chosen centre. The algorithm uses the haversine function to determine these edge nodes, which are the filtered nodes. A double dimension array is introduced at this stage to store the distances between all the filtered nodes. To achieve a polygon having the minimum number of intersecting edges, it is important to output the coordinates in an ordered manner. Here, the travelling salesman problem (using nearest neighbour approach) is implemented to ensure minimum distances between all the filtered nodes. This problem is NP-hard and there is still a finite possibility of the intersection of edges. One can decrease this possibility by increasing the filtered nodes (and therefore increasing the original number of nodes) and improving the range precision. The output from this step is an ordered set of filtered nodes. The ordered set of filtered nodes from the last step is shown an a geoJSON output, which can be readily used in any map editor.
-Jia Rui Ong: Smart Range Viewer
-Category: Frontend
-Mentor: Franz Klaus
+
+# Jia Rui Ong: Smart Range Viewer 
+**Category:** Frontend  
+**Mentors:** Franz Klaus
 
 In addition to that, Jia is working on the smart range viewer project, which involves building a range computation visualization tool on top of the react application to ease range anxiety among electric vehicle drivers. Some of the tasks he has completed so far include:
 the addition of input fields to the reachability tab, 
