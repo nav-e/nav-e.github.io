@@ -1,5 +1,5 @@
 ---
-title: GSoC 2017 - Pavel Danilov - The Routing Server
+title: GSoC 2017 - The Routing Server - Pavel Danilov
 date: '2017-08-23T00:00:00.284Z'
 layout: post
 path: /news/2017-08-23-gsoc2017-routing-server-wp/
