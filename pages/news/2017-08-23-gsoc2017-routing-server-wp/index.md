@@ -24,7 +24,7 @@ This post is about my GSoC project, under Greennav organization, implementing th
 
 ## Final Product
 
-  * #### [Repository](https://github.com/Greennav/routing) [fork](https://github.com/Carix0n/routing)
+  * #### [Repository](https://github.com/Greennav/routing) (dev fork: [Routing](https://github.com/Carix0n/routing))
 
   * #### [Commits](https://github.com/Greennav/routing/commits/master)
 

@@ -24,7 +24,7 @@ This post is about my GSoC project, under Greennav organization, implementing Sm
 
 ## Final Product
 
-  * #### [Repository](https://github.com/Greennav/GreenNav) [Reachibility](https://github.com/jrios6/GreenNav/tree/reachability)
+  * #### [Repository](https://github.com/Greennav/GreenNav) (dev fork: [Reachibility](https://github.com/jrios6/GreenNav/tree/reachability))
 
   * #### [Commits](https://github.com/jrios6/GreenNav/commits/reachability)
 

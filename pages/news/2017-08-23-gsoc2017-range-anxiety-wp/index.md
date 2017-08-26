@@ -26,7 +26,7 @@ This post is about my GSoC project, under Greennav organization, implementing Ra
 
   * #### [Repository](https://github.com/Greennav/range-anxiety)
 
-  * #### [Commits](https://github.com/Greennav/range-anxiety)
+  * #### [Commits](https://github.com/Greennav/range-anxiety/commits/master)
 
   * #### [Kanban Board](https://github.com/orgs/Greennav/projects/2)
 
