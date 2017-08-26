@@ -12,7 +12,7 @@ tags:
 ### Implementing Smart Range Viewer, by Jia Rui Ong
 
 **Category:** Frontend  
-**Mentors:** Franz Klaus
+**Mentors:** Franz Klaus, Thomas Ort
 
 ## Overview
 
