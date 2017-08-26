@@ -1,5 +1,5 @@
 ---
-title: GSoC 2017 - Smart Range Viewer - Jia Rui Ong
+title: GSoC 2017 - Smart Range Viewer - Ong Jia Rui
 date: '2017-08-23T00:00:00.284Z'
 layout: post
 path: /news/2017-08-23-gsoc2017-smart-range-viewer-wp/
@@ -9,7 +9,7 @@ tags:
 ---
 
 ### Google Summer of Code 2017
-### Implementing Smart Range Viewer, by Jia Rui Ong
+### Implementing Smart Range Viewer, by Ong Jia Rui
 
 **Category:** Frontend  
 **Mentors:** Franz Klaus, Thomas Ort

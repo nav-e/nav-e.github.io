@@ -12,7 +12,7 @@ tags:
 ### Implementing Range Anxiety, by Leah Chrestien
 
 **Category:** Algorithm  
-**Mentors:** Bruno Magalhaes, René Schönfelder
+**Mentors:** Bruno Magalhães, René Schönfelder
 
 ## Overview
 
