@@ -23,7 +23,7 @@ Four design requirements for the range polygon were initially proposed:
 2. Slicing of polygon should not simplify the polygon too much and result in marking regions as non-reachable,
 3. Regions where probability of it being reachable is low, such as the border of the polygon, should be indicated,
 4. Range polygon should also show regions which one can drive to and return back home from.  
-
+<br />
 
 Implementation of the Smart Range Viewer project, which took place over a 13-week period between 30th May and 29th Aug, was composed of the following phases:  
 
@@ -58,7 +58,7 @@ Implementation of the Smart Range Viewer project, which took place over a 13-wee
 * Integrated Google Map's Places and Autocomplete Service for convenient searching of places or addresses
 * Integrated Turf.js convex hull method to sort polygon vertices for better visual display
 * Refactored code for final evaluation  
-    
+<br />
 
 The eventual project differed from the original proposal in several areas due to technical limitations and the discovery of other GSOC projects with similar objectives. The focus of this project thus shifted towards the front-end segment with Leah Chrestien (a fellow GSOC participant) working on the range computation algorithm in Java.  
 
