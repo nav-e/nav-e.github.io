@@ -32,23 +32,28 @@ Week 1- 2:
 	- Styling of range polygon
 	- Implemented calculateRangePolygon using a Geodesic library to calculate a simple polygon based on remaining vehicle range
 	- Integrated Geolocation API to display user's current location
+	
 Week 3-5:
 	- Integrated Overpass API for testing vehicular accessibility of user's starting location
 	- Added location picking functionality to OpenLayers map
 	- Refactored Reachability Tab to an individual React Component
+	
 Week 6-8:
 	- Added text fields for entering origin and destination under Reachability Tab
 	- Added button for hiding of range polygon
 	- Added OpenLayers control for displaying of location picker coordinates
 	- Added map zooming and re-centering capabilities to range polygon display
+	
 Week 9-10:
 	- Added support for units conversion between miles and kilometres
 	- Added snackbar alerts to display user warnings
 	- Added floating action button for centering of map to user's location
+	
 Week 11-12:
 	- Integrated range polygon computation API from Range Anxiety project by Leah Chrestien
 	- Added support for entering of coordinates to origin and destination fields
 	- Improved display of coordinates under Reachability Tab
+	
 Week 13:
 	- Integrated Google Map's Places and Autocomplete Service for convenient searching of places or addresses
 	- Integrated Turf.js convex hull method to sort polygon vertices for better visual display
@@ -76,7 +81,8 @@ Over the course of the 13 weeks, a user-friendly front-end tool for visualisatio
 While the Reachability Tab offer users the choice of indicating their destination, this information is currently not used while generating the range polygon. Currently, the range computation algorithm in the back-end does not consider the destination when computing the vertices. Should such an algorithm be implemented, the application should call the new API if a destination is indicated.
 
 Furthermore, the application should support the display of range polygons with regions coloured differently based on their probability of being reachable, should such a range computation algorithm be developed in the future.
-Also, there were issues faced with CORs when integrating the Google Places Web Services API.  The Google Map JavaScript Library, which requires the insertion of a Google Map Object to the DOM, was used instead. This is a short-term workaround and should be remedied for future deployment at scale.
+
+Also, there were issues faced with CORs when integrating the Google Places Web Services API. The Google Map JavaScript Library, which requires the insertion of a Google Map Object to the DOM, was used instead. This is a short-term workaround and should be remedied for future deployment at scale.
 
 To provide a consistent user experience, location search, location picking and the use of geolocation should be extended to the Routing Tab.
 
