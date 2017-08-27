@@ -27,37 +27,37 @@ Four design requirements for the range polygon were initially proposed:
 
 Implementation of the Smart Range Viewer project, which took place over a 13-week period between 30th May and 29th Aug, was composed of the following phases:  
 
-Week 1- 2:  
-	- Added range polygon layer to OpenLayers map
-	- Styling of range polygon
-	- Implemented calculateRangePolygon using a Geodesic library to calculate a simple polygon based on remaining vehicle range
-	- Integrated Geolocation API to display user's current location
+#### Week 1- 2:
+* Added range polygon layer to OpenLayers map
+* Styling of range polygon
+* Implemented calculateRangePolygon using a Geodesic library to calculate a simple polygon based on remaining vehicle range
+* Integrated Geolocation API to display user's current location
 	
-Week 3-5:
-	- Integrated Overpass API for testing vehicular accessibility of user's starting location
-	- Added location picking functionality to OpenLayers map
-	- Refactored Reachability Tab to an individual React Component
+#### Week 3-5:
+* Integrated Overpass API for testing vehicular accessibility of user's starting location
+* Added location picking functionality to OpenLayers map
+* Refactored Reachability Tab to an individual React Component
 	
-Week 6-8:
-	- Added text fields for entering origin and destination under Reachability Tab
-	- Added button for hiding of range polygon
-	- Added OpenLayers control for displaying of location picker coordinates
-	- Added map zooming and re-centering capabilities to range polygon display
+#### Week 6-8:
+* Added text fields for entering origin and destination under Reachability Tab
+* Added button for hiding of range polygon
+* Added OpenLayers control for displaying of location picker coordinates
+*  Added map zooming and re-centering capabilities to range polygon display
 	
-Week 9-10:
-	- Added support for units conversion between miles and kilometres
-	- Added snackbar alerts to display user warnings
-	- Added floating action button for centering of map to user's location
+#### Week 9-10:
+* Added support for units conversion between miles and kilometres
+* Added snackbar alerts to display user warnings
+* Added floating action button for centering of map to user's location
 	
-Week 11-12:
-	- Integrated range polygon computation API from Range Anxiety project by Leah Chrestien
-	- Added support for entering of coordinates to origin and destination fields
-	- Improved display of coordinates under Reachability Tab
+#### Week 11-12:
+* Integrated range polygon computation API from Range Anxiety project by Leah Chrestien
+* Added support for entering of coordinates to origin and destination fields
+* Improved display of coordinates under Reachability Tab
 	
-Week 13:
-	- Integrated Google Map's Places and Autocomplete Service for convenient searching of places or addresses
-	- Integrated Turf.js convex hull method to sort polygon vertices for better visual display
-	- Refactored code for final evaluation  
+#### Week 13:
+* Integrated Google Map's Places and Autocomplete Service for convenient searching of places or addresses
+* Integrated Turf.js convex hull method to sort polygon vertices for better visual display
+* Refactored code for final evaluation  
     
 
 The eventual project differed from the original proposal in several areas due to technical limitations and the discovery of other GSOC projects with similar objectives. The focus of this project thus shifted towards the front-end segment with Leah Chrestien (a fellow GSOC participant) working on the range computation algorithm in Java.  
