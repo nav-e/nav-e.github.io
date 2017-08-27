@@ -70,4 +70,4 @@ This module helps in filtering the notification in order to not spam the users. 
   * #### [Kanban Board](https://github.com/orgs/Greennav/projects/5)
 
 ## What's left to do
-
+According to the project work decided during the discussions during the implementation phase, the modules have been completed however depending on the future needs of the organisation many machine learning algorithms can be implemented.
