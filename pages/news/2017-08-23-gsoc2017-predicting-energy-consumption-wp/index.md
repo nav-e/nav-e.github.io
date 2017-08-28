@@ -12,6 +12,7 @@ tags:
 ### Implementation of Predicting Energy Consumption, by Indraneil Paul
 
 **Category:** Experimental
+
 **Mentors:** Florian Lenschow
 
 # Overview
@@ -48,7 +49,6 @@ Below is a summary timeline of the implementation of the various approaches and 
 * Implemented an LSTM network with dropout that used not only telemetry data but also first order and second order gradient and historical observations
 * Fixed some bugs in the data reader
 
-<br><br>
 The L1 regularized linear regression slightly ouperformed the L2 variant, ostensibly due to its better feature selection abilities. Both these methods significantly outperformed the vanilla linear regression and the best subsets linear regression. While all the other methods surpassed this baseline set by the linear regression approach, the two methods that stood out were xgboost with gradient inputs (Week 9-11) and the LSTM with gradient and historical inputs (Week 12-13)
 
 # Proposal link
