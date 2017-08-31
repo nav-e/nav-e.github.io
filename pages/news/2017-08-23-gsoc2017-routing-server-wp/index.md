@@ -29,7 +29,7 @@ As regards REST API, I have implemented simple one that support routing from the
 */route?from=4058432473&to=25195716&algorithm=dijkstra*
 
 Most important and challenging task was implementation of Contraction Hierarchies algorithm, which is considered in [original article](http://algo2.iti.kit.edu/schultes/hwy/contract.pdf). First of all, I have implemented C++ version of this algorithm; the reason for this decision was possibility to test the algorithm in [Yandex Contest](https://contest.yandex.ru/?lang=en) testing system. I've spent a lot of time on it, tested on real road graphs and performance was very impressive. Performance on NY graph with 264346 nodes and 733846 edges with 10000 randomly generated queries for shortest path is shown on the image.
-![Contraction Hierarchies profiling](images/ch_profile_ny)
+![ch_profile_ny](https://user-images.githubusercontent.com/10358661/29935421-8710e3b2-8ea0-11e7-9059-30194ef84fe2.jpg)
 As regards Java implementation directly for the GreenNav project, it performs not so impressively in testing stage due to in-memory persistence restrictions that will be took into account in the final chapter **What's left to do**. During implementation this algorithm, there arise a need in special case of *RoadGraph* with support of special inner data according to the algorithm, as a result I've come up with *RoadGraphCH* class.
 
 ### Proposal link
