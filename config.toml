@@ -1,19 +1,47 @@
-siteTitle="GreenNav"
-baseColor = "#1B5E20"
-primaryColor = "#F05D21"
-linkPrefix = ""
-developmentPages = [
-  "/development/",
-  "/development/getting-started/",
-  "/development/design-style-guide/",
-  "/development/interface/",
-  "/development/add-wiki-pages/",
-  "/development/roadmap/",
-]
-docPages = [
-  "/docs/",
-  "/docs/getting-started/",
-  "/docs/ideas-page/",
-  "/docs/proposal-template/",
-  "/docs/board/",
-]
+baseURL = "http://nav-e.me/"
+languageCode = "en-us"
+title = "nav-e"
+theme = "minimal"
+
+[params]
+    accent = "green"
+    showBorder = true
+    backgroundColor = "white"
+    font = "Roboto" # should match the name on Google Fonts!
+    highlight = true
+    highlightStyle = "solarized-dark"
+    highlightLanguages = ["go", "javascript"]
+
+[[menu.main]]
+    url = "/landing_page"
+    name = "Home"
+    weight = 1
+
+[[menu.main]]
+    url = "/docs/"
+    name = "Docs"
+    weight = 2
+
+# Social icons to be shown on the right-hand side of the navigation bar
+# The "name" field should match the name of the icon to be used
+# The list of available icons can be found at http://fontawesome.io/icons/
+
+[[menu.icon]]
+    url = "https://github.com/nav-e/"
+    name = "github"
+    weight = 1
+
+[[menu.icon]]
+    url = "https://twitter.com/username/"
+    name = "twitter"
+    weight = 3
+
+[[menu.icon]]
+    url = "https://www.linkedin.com/in/username/"
+    name = "linkedin"
+    weight = 4
+
+[[menu.icon]]
+    url = "https://www.stackoverflow.com/username/"
+    name = "stack-overflow"
+    weight = 5
